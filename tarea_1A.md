@@ -46,6 +46,26 @@ Este comando mostrará todos los procesos en ejecución, sin importar la termina
     3 ?        00:00:00 rcu_gp
   ...
 ```
+### Columnas importantes:
+
+1. **PID (Process ID)**:
+   - El **ID de proceso** es un número único que el sistema operativo asigna a cada proceso en ejecución. Cada cosa que se ejecute en el ordenador tiene un número que lo identifica, se como nuestro nombre
+
+2. **TTY (Terminal Type)**:
+   - Muestra el tipo de terminal (TTY) desde el cual el proceso fue iniciado. Es el programa donde hemos lanzado los programas, qterminal
+
+3. **TIME**:
+   - Es el tiempo de CPU que el proceso ha consumido desde que comenzó a ejecutarse. Se muestra en el formato `minutos:segundos`.
+   - En el ejemplo, el proceso `systemd` ha usado `00:00:02` de tiempo de CPU, mientras que `ps` ha usado `00:00:01`.
+
+4. **CMD (Command)**:
+   - Es el nombre del comando o proceso que está en ejecución.
+   - Por ejemplo, en la salida se ven procesos como `systemd`, `bash`, y `dbus-daemon`, que son nombres de comandos ejecutándose.
+
+
+
+## Ejecuta ps -A ¿Qué diferencias ves con respecto ps -e?
+
 
 ## 3. Mostrar más detalles de los procesos
 
