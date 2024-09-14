@@ -229,7 +229,7 @@ kill [PID]
 Después de ejecutar `kill`, pueden volver a ejecutar `ps -e` para verificar que el proceso ya no aparece en la lista.
 
 ## 6. Desafío final
-Propón a los alumnos ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
+ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
 
 ### Ejemplo de programa:
 
