@@ -7,7 +7,7 @@ El comando `ps` (Process Status) en Linux se utiliza para mostrar una lista de l
 El comando `ps` sin opciones muestra los procesos asociados con la terminal actual. Es decir, solo se mostrarán los procesos que están corriendo en la misma sesión.
 
 ### Ejemplo básico:
-
+#### [Captura un pantallazo de lo siguiente]
 ```bash
 ps
 ```
@@ -46,26 +46,8 @@ Este comando mostrará todos los procesos en ejecución, sin importar la termina
     3 ?        00:00:00 rcu_gp
   ...
 ```
-### Columnas importantes:
-
-1. **PID (Process ID)**:
-   - El **ID de proceso** es un número único que el sistema operativo asigna a cada proceso en ejecución. Cada cosa que se ejecute en el ordenador tiene un número que lo identifica, se como nuestro nombre
-
-2. **TTY (Terminal Type)**:
-   - Muestra el tipo de terminal (TTY) desde el cual el proceso fue iniciado. Es el programa donde hemos lanzado los programas, qterminal
-
-3. **TIME**:
-   - Es el tiempo de CPU que el proceso ha consumido desde que comenzó a ejecutarse. Se muestra en el formato `minutos:segundos`.
-   - En el ejemplo, el proceso `systemd` ha usado `00:00:02` de tiempo de CPU, mientras que `ps` ha usado `00:00:01`.
-
-4. **CMD (Command)**:
-   - Es el nombre del comando o proceso que está en ejecución.
-   - Por ejemplo, en la salida se ven procesos como `systemd`, `bash`, y `dbus-daemon`, que son nombres de comandos ejecutándose.
-
-
 
 ## Ejecuta ps -A ¿Qué diferencias ves con respecto ps -e?
-
 
 ## 3. Mostrar más detalles de los procesos
 
@@ -102,6 +84,14 @@ Este comando solo mostrará los procesos que corresponden al comando `bash`.
  2345 pts/0    00:00:00 bash
 ```
 
+---
+
+Lanza el navegador firefox para poder filtrar el o los procesos que se han lanzado en el programa.
+```bash
+ps -aux | grep firefox
+```
+
+
 ## 5. Mostrar procesos en tiempo real
 
 El comando `top` es una alternativa para ver procesos en tiempo real, pero también puedes usar `ps` en combinación con `watch` para una vista actualizable cada pocos segundos.
@@ -120,6 +110,16 @@ Una vez que encuentras un proceso que deseas detener, puedes usar el comando `ki
 ```bash
 kill 2345
 ```
+
+## 7.  Lanzar un programa en segundo plano
+
+
+#### Ejemplo 1: usando `sleep`
+```bash
+sleep 60 &
+```
+#### [Captura un pantallazo de lo siguiente]
+#### Ejecuta ps -e  varias veces y observa como la columna TIME muestra el tiempo. 
 
 ## Ejercicios propuestos:
 
@@ -146,5 +146,102 @@ kill 2345
 ping 8.8.8.8
 ```
 2. Usa `ps -e` para encontrar el PID del proceso `ping`.
-3. Detén el proceso usando `kill` seguido del PID.
+4. Detén el proceso usando `kill` seguido del PID.
+
+### EJERCICIOS MÁS AVANZADOS
+
+# Actividad paso a paso
+
+## 1. Introducción básica al comando `ps -e`
+Primero, explícales las columnas **PID**, **TTY**, **TIME**, y **CMD**.  
+Ejecuta en clase el comando `ps -e` y muestra una lista de los procesos que ya están corriendo.  
+Podrías enfocarte en procesos importantes como `bash`, `systemd`, o algún demonio (`dbus-daemon`).
+
+## 2. Lanzar un programa en segundo plano
+Pide a tus alumnos que lancen un programa sencillo que se ejecute durante unos segundos para observar cómo aparece en la lista de procesos.  
+Podrían usar programas como `sleep` o `yes` para este propósito.
+
+### Ejemplo 1: usando `sleep`
+
+```bash
+sleep 60 &
+```
+Esto ejecuta el comando `sleep` (que hace que el sistema espere 60 segundos) en segundo plano.  
+Luego, piden a los alumnos que ejecuten:
+
+```bash
+ps -e | grep sleep
+```
+
+Así podrán ver cómo el proceso `sleep` aparece con un **PID**, un **CMD** (que es `sleep`), y posiblemente un valor bajo en la columna **TIME** (porque el proceso no usa mucho CPU).
+
+### Ejemplo 2: usando `yes`
+
+```bash
+yes > /dev/null &
+```
+
+El comando `yes` genera una salida infinita de 'y', pero redirigida a `/dev/null`, lo que impide que se muestre en la terminal.  
+Los alumnos pueden buscar este proceso con:
+
+```bash
+ps -e | grep yes
+```
+
+Verán que este proceso va consumiendo tiempo de CPU (columna **TIME**) porque está en un bucle constante.
+
+## 3. Explicación en tiempo real de **TIME**
+A medida que los procesos `sleep` o `yes` corren, pide a los alumnos que sigan ejecutando el comando `ps -e` cada cierto tiempo para observar cómo cambia la columna **TIME**.  
+Esto les permitirá ver cómo un proceso que utiliza la CPU incrementa su tiempo de CPU a medida que sigue corriendo.
+
+Para hacerlo más dinámico, puedes hacer que usen:
+
+```bash
+watch -n 1 'ps -e | grep yes'
+```
+
+El comando `watch` actualizará la lista de procesos cada segundo para que los alumnos vean en tiempo real cómo aumenta el valor en la columna **TIME** del proceso `yes`.
+
+## 4. Ejecutar un programa interactivo en primer plano
+También podrían ejecutar un programa en el primer plano para observar cómo se asocia con un **TTY**.
+
+### Ejemplo: ejecutar un editor de texto
+
+```bash
+nano
+```
+
+Mientras el programa `nano` (o cualquier otro programa interactivo como `top`) esté en ejecución, pídeles que abran otra terminal y ejecuten:
+
+```bash
+ps -e | grep nano
+```
+
+Aquí verán cómo el proceso está asociado a un **TTY** (por ejemplo, tty1), lo que indica que está siendo controlado directamente por el terminal de usuario.
+
+## 5. Finalizar procesos
+Para que comprendan cómo desaparecen los procesos de la lista, pueden utilizar el comando `kill` para finalizar el proceso que han iniciado:
+
+```bash
+kill [PID]
+```
+
+Después de ejecutar `kill`, pueden volver a ejecutar `ps -e` para verificar que el proceso ya no aparece en la lista.
+
+## 6. Desafío final
+Propón a los alumnos ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
+
+### Ejemplo de programa:
+
+```bash
+for i in {1..10}; do echo "Running iteration $i"; sleep 1; done &
+```
+
+Esto ejecutará un bucle que se repite 10 veces, durmiendo 1 segundo en cada iteración.  
+Pueden seguir su progreso con:
+
+```bash
+ps -e | grep bash
+```
+
 
