@@ -116,7 +116,6 @@ kill 2345
 ```bash
 sleep 60 &
 ```
-#### [Captura un pantallazo de lo siguiente]
 #### Ejecuta ps -e  varias veces y observa como la columna TIME muestra el tiempo. 
 
 ## Ejercicios propuestos:
@@ -205,6 +204,7 @@ ps -e | grep nano
 el proceso está asociado a un **TTY** (por ejemplo, tty1), lo que indica que está siendo controlado directamente por el terminal de usuario.
 
 ---
+
 ## 6. ESTADOS DE UN PROCESO.
 Los procesos tiene vida, es decir, pueden estar ejecutándose o en espera de algún recurso para ejectuarse, pueden morir, o bien pueden estar en un estado perdido,
 que denomina zombie.
@@ -230,6 +230,25 @@ Estados adicionales (caracteres adicionales)
 * +: Primer plano
 
 ### Ejercicio: A partir del ps -aux visualiza varios estados y explica la columna STAT y sus combinaciones, ¿Puedes ver algún estado en pausa o ejecutando? ¿Algún proceso de alta prioridad? ¿Puedes ver los procesos padres? Obtén toda la información que puedas comentando los ejemplos que ves en tu propia máquina.
+---
+
+###7. Detectar Malware en tu equipo o servidor.
+
+Hay que busca los procesos que más CPU están consumiendo por si detectamos algo raro
+
+```bash
+ps -aux -sort=%cpu | head -n 10
+```
+
+#### Ejercicios: 
+* Obtener aquellos procesos que más % de memoria utilizan
+* Obtener los 3 procesos que más % memoria utilizan
+* Obtener los 3 procesos que más memoria física utilizan en kB
+* Obtener el número de procesos que se están ejecutando
+* Con pipe | utilizando el comando wc -l	
+* Obtener el proceso con pid 1 Opción –p
+
+
 ---
 ## 7. Desafío final
 ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
