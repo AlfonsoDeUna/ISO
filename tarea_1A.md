@@ -6,7 +6,7 @@ Los procesos son unas estructuras que crean los sistemas operativos para que se 
 
 A veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla para obtener más información, estas últimas acciones se denominan operaciones de E/S. 
 
-De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su creación.
+De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (Entrada/Salida o recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su creación.
 
 Todo sistema operativo tiene su Subsistema de procesos, Subsistema de memoria, subsistema de E/S y ficheros. Básicamente esto es lo que controla un sistema operativo. Estos subsistemas forman parte de lo más interno del sistema operativo que se denomina Kernel.
 
