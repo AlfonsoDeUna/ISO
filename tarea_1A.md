@@ -12,7 +12,7 @@ Todo sistema operativo tiene su Subsistema de procesos, Subsistema de memoria, s
 
 En esta práctica vamos a ver cómo gestiona el sistema operativo los procesos mediante ps. Puede ser muy útil si la máquina no va bien, o para detectar problemas derivados de malware o software que se está ejecutando en segundo plano.
 
-### Haz un esquema conceptual de este resumen.
+### Ejercicio: Haz un esquema conceptual de este resumen.
 
 ## 1. Introducción al comando `ps`
 
