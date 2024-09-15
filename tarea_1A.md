@@ -104,6 +104,8 @@ Este comando solo mostrará los procesos que corresponden al comando `bash`.
 Lanza el navegador firefox para poder filtrar el o los procesos que se han lanzado en el programa. Hay procesos que lanzan otros procesos. Este se denomina
 multiprogramación y siempre se puede reconocer el proceso padre que lanzó los procesos hijos buscando el PPID que es identificador del proceso padre.
 
+*Nota: grep es un comando que se utiliza para filtrar por la palabra que pongas de modo que solo te saca por pantalla el filtro.*
+
 ```bash
 ps -aux | grep firefox
 ps -ef | grep firefox
@@ -134,7 +136,7 @@ kill 2345
 ```bash
 sleep 60 &
 ```
-#### Ejecuta ps -e  varias veces y observa como la columna TIME muestra el tiempo. 
+#### Ejecuta ps -e  varias veces. hemos lanzado el comando sleep y lo hemos puesto en espera 60 sg
 
 ## Ejercicios propuestos:
 
