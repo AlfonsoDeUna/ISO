@@ -216,24 +216,23 @@ Para visualizar el estado de un proceso esta la columna STAT
 ps aux
 ```
 Estados principales (primer carácter)
-R:  Ejecutando
-S:  Esperando
-D: Esperando E/S
-Z:  Zombie. No responde
-T:  Stopped o pausa
+* R:  Ejecutando
+* S:  Esperando
+* D: Esperando E/S
+* Z:  Zombie. No responde
+* T:  Stopped o pausa
 
 Estados adicionales (caracteres adicionales)
-<: Alta prioridad 
-N: Baja prioridad 
-s: Es un proceso padre
-l: Es un hilo.
-+: Primer plano
+* <: Alta prioridad 
+* N: Baja prioridad 
+* s: Es un proceso padre
+* l: Es un hilo.
+* +: Primer plano
 
 ### Ejercicio: A partir del ps -aux visualiza varios estados y explica la columna STAT y sus combinaciones, ¿Puedes ver algún estado en pausa o ejecutando? ¿Algún proceso
 de alta prioridad? ¿Puedes ver los procesos padres? Obtén toda la información que puedas comentando los ejemplos que ves en tu propia máquina.
-
-
-## 6. Desafío final
+---
+## 7. Desafío final
 ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
 
 ### Ejemplo de programa:
