@@ -249,7 +249,7 @@ Estados adicionales (caracteres adicionales)
 ### Ejercicio: A partir del ps -aux visualiza varios estados y explica la columna STAT y sus combinaciones, ¿Puedes ver algún estado en pausa o ejecutando? ¿Algún proceso de alta prioridad? ¿Puedes ver los procesos padres? Obtén toda la información que puedas comentando los ejemplos que ves en tu propia máquina.
 ---
 
-###7. Detectar Malware en tu equipo o servidor.
+### 7. Detectar Malware en tu equipo o servidor.
 
 Hay que busca los procesos que más CPU están consumiendo por si detectamos algo raro
 
@@ -266,23 +266,5 @@ ps -aux -sort=%cpu | head -n 10
 * Obtener el proceso con pid 1 Opción –p
 
 
----
-## 5. Desafío final
-ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
-
-### Ejemplo de programa:
-
-Abre una terminal y lanza el siguiente 
-
-```bash
-for i in {1..10}; do echo "Running iteration $i"; sleep 10; done &
-```
-
-Esto ejecutará un bucle que se repite 10 veces, durmiendo 1 segundo en cada iteración.  
-Pueden seguir su progreso con:
-
-```bash
-ps -e | grep bash
-```
 
 
