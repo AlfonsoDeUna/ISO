@@ -124,12 +124,11 @@ sleep 60 &
 ## Ejercicios propuestos:
 
 ### Ejercicio 1: Procesos básicos
-1. Usa el comando `ps` para listar los procesos asociados con tu sesión de terminal.
+1. Usa el comando `ps` para listar los procesos asociados con tu sesión de terminal muestra un pantallazo.
 2. Explica qué significan las columnas que aparecen en la salida.
    
 ### Ejercicio 2: Listar todos los procesos
 1. Usa el comando `ps -e` para listar todos los procesos en ejecución.
-2. Busca el proceso `bash` utilizando `ps -C bash` y anota su PID.
    
 ### Ejercicio 3: Detallar procesos
 1. Usa el comando `ps -ef` para mostrar todos los procesos en un formato detallado.
@@ -152,14 +151,8 @@ ping 8.8.8.8
 
 # Actividad paso a paso
 
-## 1. Introducción básica al comando `ps -e`
-Primero, explícales las columnas **PID**, **TTY**, **TIME**, y **CMD**.  
-Ejecuta en clase el comando `ps -e` y muestra una lista de los procesos que ya están corriendo.  
-Podrías enfocarte en procesos importantes como `bash`, `systemd`, o algún demonio (`dbus-daemon`).
-
-## 2. Lanzar un programa en segundo plano
-Pide a tus alumnos que lancen un programa sencillo que se ejecute durante unos segundos para observar cómo aparece en la lista de procesos.  
-Podrían usar programas como `sleep` o `yes` para este propósito.
+## 1. Lanzar un programa en segundo plano
+Lanza un programa sencillo que se ejecute durante unos segundos para observar cómo aparece en la lista de procesos.  
 
 ### Ejemplo 1: usando `sleep`
 
@@ -173,7 +166,6 @@ Luego, piden a los alumnos que ejecuten:
 ps -e | grep sleep
 ```
 
-Así podrán ver cómo el proceso `sleep` aparece con un **PID**, un **CMD** (que es `sleep`), y posiblemente un valor bajo en la columna **TIME** (porque el proceso no usa mucho CPU).
 
 ### Ejemplo 2: usando `yes`
 
@@ -187,23 +179,18 @@ Los alumnos pueden buscar este proceso con:
 ```bash
 ps -e | grep yes
 ```
-
-Verán que este proceso va consumiendo tiempo de CPU (columna **TIME**) porque está en un bucle constante.
-
-## 3. Explicación en tiempo real de **TIME**
-A medida que los procesos `sleep` o `yes` corren, pide a los alumnos que sigan ejecutando el comando `ps -e` cada cierto tiempo para observar cómo cambia la columna **TIME**.  
-Esto les permitirá ver cómo un proceso que utiliza la CPU incrementa su tiempo de CPU a medida que sigue corriendo.
-
 Para hacerlo más dinámico, puedes hacer que usen:
 
 ```bash
 watch -n 1 'ps -e | grep yes'
 ```
 
-El comando `watch` actualizará la lista de procesos cada segundo para que los alumnos vean en tiempo real cómo aumenta el valor en la columna **TIME** del proceso `yes`.
+---
+## Responde a las siguientes preguntas
+¿Qué diferencia existe en la columna tiempo entre el ejemplo 1 y el ejemplo 2? ¿Por qué el Time en el primer ejemplo no pasa el tiempo y sí en el segundo?
+Pon un ejemplo de un proceso que hayamos ejecutado y un servicio que hayamos ejectuado. Acuardate que los procesos eran los actores y los servicios el personal que está ayudando a la obra de teatro pero no se ve. ¿Cómo lo relacionaes con lo que hemos visto?
 
-## 4. Ejecutar un programa interactivo en primer plano
-También podrían ejecutar un programa en el primer plano para observar cómo se asocia con un **TTY**.
+---
 
 ### Ejemplo: ejecutar un editor de texto
 
@@ -211,22 +198,14 @@ También podrían ejecutar un programa en el primer plano para observar cómo se
 nano
 ```
 
-Mientras el programa `nano` (o cualquier otro programa interactivo como `top`) esté en ejecución, pídeles que abran otra terminal y ejecuten:
+Mientras el programa `nano` (o cualquier otro programa interactivo como `top`) esté en ejecución, abre otro terminal y ejecuta:
 
 ```bash
 ps -e | grep nano
 ```
 
-Aquí verán cómo el proceso está asociado a un **TTY** (por ejemplo, tty1), lo que indica que está siendo controlado directamente por el terminal de usuario.
+el proceso está asociado a un **TTY** (por ejemplo, tty1), lo que indica que está siendo controlado directamente por el terminal de usuario.
 
-## 5. Finalizar procesos
-Para que comprendan cómo desaparecen los procesos de la lista, pueden utilizar el comando `kill` para finalizar el proceso que han iniciado:
-
-```bash
-kill [PID]
-```
-
-Después de ejecutar `kill`, pueden volver a ejecutar `ps -e` para verificar que el proceso ya no aparece en la lista.
 
 ## 6. Desafío final
 ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
