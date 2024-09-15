@@ -85,12 +85,11 @@ Este comando solo mostrará los procesos que corresponden al comando `bash`.
 ```
 
 ---
-
+#### Otra forma de obtener más información de un proceso concreto
 Lanza el navegador firefox para poder filtrar el o los procesos que se han lanzado en el programa.
 ```bash
 ps -aux | grep firefox
 ```
-
 
 ## 5. Mostrar procesos en tiempo real
 
@@ -112,7 +111,6 @@ kill 2345
 ```
 
 ## 7.  Lanzar un programa en segundo plano
-
 
 #### Ejemplo 1: usando `sleep`
 ```bash
