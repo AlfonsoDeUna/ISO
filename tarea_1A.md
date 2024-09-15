@@ -2,7 +2,9 @@
 
 El comando `ps` (Process Status) en Linux se utiliza para mostrar una lista de los procesos que están ejecutándose en el sistema. Es una herramienta muy útil para conocer el estado de los procesos, su identificación, uso de CPU, memoria, y otros detalles.
 
-Los procesos son unas estructuras que crean los sistemas operativos para que se pueda ejecutar cosas en un ordenador de manera optimizada. Para que se puedad ejecutar cualquier tarea, se necesita que el procesador pueda ejecutatr en un momento dado que no esté ocupado con otra tarea, memoria para guardar los pasos que están programados en la tarea y los datos pque necesite la tarea, a veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla para obtener más información, estas últimas acciones se denominan operaciones de E/S. 
+Los procesos son unas estructuras que crean los sistemas operativos para que se pueda ejecutar cosas en un ordenador de manera optimizada. Para que se puedad ejecutar cualquier tarea, se necesita que el procesador pueda ejecutatr en un momento dado. Es decir, que no esté ocupado con otra tarea, memoria para guardar los pasos que están programados en la propia tarea y los datos que necesite para completar la tarea. 
+
+A veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla para obtener más información, estas últimas acciones se denominan operaciones de E/S. 
 
 De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su creación.
 
