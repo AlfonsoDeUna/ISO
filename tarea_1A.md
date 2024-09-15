@@ -4,9 +4,9 @@ El comando `ps` (Process Status) en Linux se utiliza para mostrar una lista de l
 
 Los procesos son unas estructuras que crean los sistemas operativos para que se pueda ejecutar cosas en un ordenador de manera optimizada. Para que se puedad ejecutar cualquier tarea, se necesita que el procesador pueda ejecutatr en un momento dado. Es decir, que no esté ocupado con otra tarea, memoria para guardar los pasos que están programados en la propia tarea y los datos que necesite para completar la tarea. 
 
-A veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla para obtener más información, estas últimas acciones se denominan operaciones de E/S. 
+A veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla, estas acciones se denominan operaciones de Entrada/Salida E/S. 
 
-De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (Entrada/Salida o recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su creación.
+De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su implementación de otro modo es una tarea muy difícil. Por tanto los sistemas operativos suelen ser construidos de forma jerárquica, antiguamente eran un solo programa donde estaba todo programado, se denominaban monolíticos. (de una sola pieza).
 
 Todo sistema operativo tiene su Subsistema de procesos, Subsistema de memoria, subsistema de E/S y ficheros. Básicamente esto es lo que controla un sistema operativo. Estos subsistemas forman parte de lo más interno del sistema operativo que se denomina Kernel.
 
