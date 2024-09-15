@@ -47,7 +47,7 @@ Este comando mostrará todos los procesos en ejecución, sin importar la termina
   ...
 ```
 
-## Ejecuta ps -aux ¿Qué diferencias ves con respecto ps -e? Responde y pon un pantallazo de ambas salidas
+### Ejercicio: Ejecuta ps -aux ¿Qué diferencias ves con respecto ps -e? Responde y pon un pantallazo de ambas salidas
 
 ## 3. Mostrar más detalles de los procesos
 
