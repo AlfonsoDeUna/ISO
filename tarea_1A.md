@@ -2,6 +2,14 @@
 
 El comando `ps` (Process Status) en Linux se utiliza para mostrar una lista de los procesos que están ejecutándose en el sistema. Es una herramienta muy útil para conocer el estado de los procesos, su identificación, uso de CPU, memoria, y otros detalles.
 
+Los procesos son unas estructuras que crean los sistemas operativos para que se pueda ejecutar cosas en un ordenador de manera optimizada. Para que se puedad ejecutar cualquier tarea, se necesita que el procesador pueda ejecutatr en un momento dado que no esté ocupado con otra tarea, memoria para guardar los pasos que están programados en la tarea y los datos pque necesite la tarea, a veces es necesario que para obtener información el ordenador tenga que preguntar a otros dispositivos como un disco duro, un teclado o mostrar cierta información en pantalla para obtener más información, estas últimas acciones se denominan operaciones de E/S. 
+
+De modo que un sistema operativo es un elemento intermedio entre el hardware y nosotros que optimiza el uso de la máquina. Necesita controlar los procesos (tareas que ejecuta la máquina), la memoria (donde guarda datos e instrucciones a ejecutar asociadas a los procesos) y la E/S (recursos externos). Un sistema operativo está construido mediante subsistemas o funciones para facilitar su creación.
+
+Todo sistema operativo tiene su Subsistema de procesos, Subsistema de memoria, subsistema de E/S y ficheros. Básicamente esto es lo que controla un sistema operativo. Estos subsistemas forman parte de lo más interno del sistema operativo que se denomina Kernel.
+
+En esta práctica vamos a ver cómo gestiona el sistema operativo los procesos mediante ps. Puede ser muy útil si la máquina no va bien, o para detectar problemas derivados de malware o software que se está ejecutando en segundo plano.
+
 ## 1. Introducción al comando `ps`
 
 El comando `ps` sin opciones muestra los procesos asociados con la terminal actual. Es decir, solo se mostrarán los procesos que están corriendo en la misma sesión.
@@ -47,7 +55,7 @@ Este comando mostrará todos los procesos en ejecución, sin importar la termina
   ...
 ```
 
-### Ejercicio: Ejecuta ps -aux ¿Qué diferencias ves con respecto ps -e? Responde y pon un pantallazo de ambas salidas
+
 
 ## 3. Mostrar más detalles de los procesos
 
@@ -66,6 +74,9 @@ UID        PID  PPID  C STIME TTY          TIME CMD
 root         1     0  0 09:30 ?        00:00:02 /sbin/init
 root         2     0  0 09:30 ?        00:00:00 [kthreadd]
 ```
+### Ejercicio: Ejecuta ps -ef ¿Qué diferencias ves con respecto ps -e? Responde y pon un pantallazo de ambas salidas
+### ¿Qué diferencia hay entre ps -aux y ps -ef? Muestra las columnas que muestran información. ¿Qué información muestra? tienes que detectar uso de cpu de memoria, 
+memoria virtual, estado, tiempo de uso y comando que lanzó el proceso. Avísame para que te pueda explicar detalles de esta parte.
 
 ## 4. Filtrar procesos por nombre
 
@@ -86,9 +97,12 @@ Este comando solo mostrará los procesos que corresponden al comando `bash`.
 
 ---
 #### Otra forma de obtener más información de un proceso concreto
-Lanza el navegador firefox para poder filtrar el o los procesos que se han lanzado en el programa.
+Lanza el navegador firefox para poder filtrar el o los procesos que se han lanzado en el programa. Hay procesos que lanzan otros procesos. Este se denomina
+multiprogramación y siempre se puede reconocer el proceso padre que lanzó los procesos hijos buscando el PPID que es identificador del proceso padre.
+
 ```bash
 ps -aux | grep firefox
+ps -ef | grep firefox
 ```
 
 ## 5. Mostrar procesos en tiempo real
@@ -146,8 +160,6 @@ ping 8.8.8.8
 
 ### EJERCICIOS MÁS AVANZADOS
 
-# Actividad paso a paso
-
 ## 1. Lanzar un programa en segundo plano
 Lanza un programa sencillo que se ejecute durante unos segundos para observar cómo aparece en la lista de procesos.  
 
@@ -162,7 +174,6 @@ Luego, piden a los alumnos que ejecuten:
 ```bash
 ps -e | grep sleep
 ```
-
 
 ### Ejemplo 2: usando `yes`
 
@@ -189,7 +200,7 @@ Pon un ejemplo de un proceso que hayamos ejecutado y un servicio que hayamos eje
 
 ---
 
-### Ejemplo: ejecutar un editor de texto
+### Ejemplo 3: ejecutar un editor de texto
 
 ```bash
 nano
@@ -205,7 +216,7 @@ el proceso está asociado a un **TTY** (por ejemplo, tty1), lo que indica que es
 
 ---
 
-## 6. ESTADOS DE UN PROCESO.
+## 4. ESTADOS DE UN PROCESO.
 Los procesos tiene vida, es decir, pueden estar ejecutándose o en espera de algún recurso para ejectuarse, pueden morir, o bien pueden estar en un estado perdido,
 que denomina zombie.
 
@@ -250,13 +261,15 @@ ps -aux -sort=%cpu | head -n 10
 
 
 ---
-## 7. Desafío final
+## 5. Desafío final
 ejecutar varios programas de fondo con tiempos diferentes y que intenten identificar sus procesos por el **PID**, observando qué procesos consumen más tiempo de CPU en la columna **TIME**.
 
 ### Ejemplo de programa:
 
+Abre una terminal y lanza el siguiente 
+
 ```bash
-for i in {1..10}; do echo "Running iteration $i"; sleep 1; done &
+for i in {1..10}; do echo "Running iteration $i"; sleep 10; done &
 ```
 
 Esto ejecutará un bucle que se repite 10 veces, durmiendo 1 segundo en cada iteración.  
