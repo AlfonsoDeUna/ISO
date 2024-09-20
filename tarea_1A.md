@@ -254,7 +254,7 @@ Estados adicionales (caracteres adicionales)
 Hay que busca los procesos que más CPU están consumiendo por si detectamos algo raro
 
 ```bash
-ps -aux -sort=%cpu | head -n 10
+ps -aux --sort=%cpu | head -n 10
 ```
 
 #### Ejercicios: 
