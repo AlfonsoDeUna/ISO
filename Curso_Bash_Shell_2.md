@@ -16,14 +16,15 @@ En este curso aprenderás a crear y utilizar funciones en Bash Shell dentro de e
 Una función en Bash es un grupo de comandos que se pueden invocar mediante un nombre específico. Este nombre actúa como un atajo para ejecutar todos los comandos definidos dentro de la función.
 
 ### **Ejemplo 1: Definición de una función básica**
-\`\`\`bash
+```bash
+#!/bin/bash
 saludo() {
     echo "¡Hola, mundo!"
 }
 
 # Llamar a la función
 saludo
-\`\`\`
+```
 
 ### **Ejercicio 1:**
 Crea una función llamada \`mostrar_fecha\` que imprima la fecha y hora actuales usando el comando \`date\`. Luego, llama a la función en tu script.
@@ -33,14 +34,14 @@ Crea una función llamada \`mostrar_fecha\` que imprima la fecha y hora actuales
 ## 2. Sintaxis de las funciones
 
 Para definir una función en Bash:
-\`\`\`bash
+```bash
 nombre_funcion() {
     # comandos
 }
-\`\`\`
+````
 
 ### **Ejemplo 2: Función con parámetros**
-\`\`\`bash
+```bash
 calcular_potencia() {
     resultado=$(( $1 ** $2 ))
     echo "$1 elevado a $2 es $resultado"
@@ -48,7 +49,7 @@ calcular_potencia() {
 
 # Llamar a la función con argumentos
 calcular_potencia 2 3
-\`\`\`
+``` 
 
 ### **Ejercicio 2:**
 Define una función llamada \`listar_procesos\` que use el comando \`ps\` para listar los procesos actuales. Luego, llama a la función en tu script.
@@ -60,14 +61,14 @@ Define una función llamada \`listar_procesos\` que use el comando \`ps\` para l
 Las funciones en Bash aceptan parámetros, los cuales se acceden mediante \`$1\`, \`$2\`, etc.
 
 ### **Ejemplo 3:**
-\`\`\`bash
+``` bash
 saludar() {
     echo "Hola, $1!"
 }
 
 # Llamar a la función con un parámetro
-saludar "Carlos"
-\`\`\`
+saludar "Alfonso"
+``` 
 
 ### **Ejercicio 3:**
 Crea una función llamada \`crear_archivo\` que tome un nombre de archivo como parámetro y cree un archivo vacío con ese nombre utilizando el comando \`touch\`.
@@ -79,7 +80,7 @@ Crea una función llamada \`crear_archivo\` que tome un nombre de archivo como p
 Aunque las funciones en Bash no retornan valores como en otros lenguajes, se puede usar \`echo\` para enviar el resultado y capturarlo.
 
 ### **Ejemplo 4:**
-\`\`\`bash
+``` bash
 obtener_usuario() {
     whoami
 }
@@ -87,7 +88,7 @@ obtener_usuario() {
 # Capturar el valor retornado
 usuario=$(obtener_usuario)
 echo "El usuario actual es $usuario"
-\`\`\`
+``` 
 
 ### **Ejercicio 4:**
 Escribe una función llamada \`contar_lineas\` que tome un archivo como parámetro y devuelva el número de líneas que contiene utilizando \`wc -l\`.
@@ -99,7 +100,7 @@ Escribe una función llamada \`contar_lineas\` que tome un archivo como parámet
 En Bash, las variables son globales por defecto. Para que una variable sea local a una función, utiliza la palabra clave \`local\`.
 
 ### **Ejemplo 5:**
-\`\`\`bash
+``` bash
 incrementar_contador() {
     local contador=0
     contador=$((contador + 1))
@@ -109,7 +110,7 @@ incrementar_contador() {
 # Llamar a la función
 incrementar_contador
 incrementar_contador
-\`\`\`
+``` 
 
 ### **Ejercicio 5:**
 Modifica la función \`crear_archivo\` para que utilice una variable local que confirme la creación del archivo mostrando un mensaje.
@@ -121,7 +122,7 @@ Modifica la función \`crear_archivo\` para que utilice una variable local que c
 Una función recursiva es aquella que se llama a sí misma. Es importante establecer una condición de parada para evitar bucles infinitos.
 
 ### **Ejemplo 6:**
-\`\`\`bash
+``` bash
 factorial() {
     if [ "$1" -le 1 ]; then
         echo 1
@@ -134,7 +135,7 @@ factorial() {
 # Calcular el factorial de 5
 resultado=$(factorial 5)
 echo "El factorial de 5 es $resultado"
-\`\`\`
+``` 
 
 ### **Ejercicio 6:**
 Crea una función recursiva llamada \`contar_regresivamente\` que tome un número como parámetro y cuente hacia atrás hasta cero, imprimiendo cada número.
@@ -146,7 +147,7 @@ Crea una función recursiva llamada \`contar_regresivamente\` que tome un númer
 Para acceder a todos los parámetros que recibe una función, utiliza \`$@\`.
 
 ### **Ejemplo 7:**
-\`\`\`bash
+```bash
 sumar() {
     suma=0
     for numero in "$@"; do
@@ -157,8 +158,7 @@ sumar() {
 
 # Llamar a la función con múltiples argumentos
 sumar 5 10 15
-\`\`\`
-
+``` 
 ### **Ejercicio 7:**
 Escribe una función llamada \`buscar_texto\` que tome un archivo y una palabra como parámetros, y cuente cuántas veces aparece la palabra en el archivo usando \`grep\` y \`wc -l\`.
 
@@ -169,14 +169,14 @@ Escribe una función llamada \`buscar_texto\` que tome un archivo y una palabra 
 Ya que conoces los comandos \`ps\` y \`cat\`, los integraremos en las funciones.
 
 ### **Ejemplo 8:**
-\`\`\`bash
+``` bash
 mostrar_usuarios_procesos() {
     ps -eo user | sort | uniq
 }
 
 # Llamar a la función
 mostrar_usuarios_procesos
-\`\`\`
+``` 
 
 ### **Ejercicio 8:**
 Crea una función llamada \`mostrar_contenido\` que tome un nombre de archivo como parámetro y muestre su contenido utilizando \`cat\`. Asegúrate de que el archivo exista antes de mostrarlo.
