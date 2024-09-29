@@ -117,32 +117,7 @@ Modifica la función \`crear_archivo\` para que utilice una variable local que c
 
 ---
 
-## 6. Funciones recursivas
-
-Una función recursiva es aquella que se llama a sí misma. Es importante establecer una condición de parada para evitar bucles infinitos.
-
-### **Ejemplo 6:**
-``` bash
-factorial() {
-    if [ "$1" -le 1 ]; then
-        echo 1
-    else
-        prev=$(factorial $(( $1 - 1 )))
-        echo $(( $1 * prev ))
-    fi
-}
-
-# Calcular el factorial de 5
-resultado=$(factorial 5)
-echo "El factorial de 5 es $resultado"
-``` 
-
-### **Ejercicio 6:**
-Crea una función recursiva llamada \`contar_regresivamente\` que tome un número como parámetro y cuente hacia atrás hasta cero, imprimiendo cada número.
-
----
-
-## 7. Funciones con múltiples parámetros
+## 6. Funciones con múltiples parámetros
 
 Para acceder a todos los parámetros que recibe una función, utiliza \`$@\`.
 
@@ -159,16 +134,16 @@ sumar() {
 # Llamar a la función con múltiples argumentos
 sumar 5 10 15
 ``` 
-### **Ejercicio 7:**
+### **Ejercicio 6:**
 Escribe una función llamada \`buscar_texto\` que tome un archivo y una palabra como parámetros, y cuente cuántas veces aparece la palabra en el archivo usando \`grep\` y \`wc -l\`.
 
 ---
 
-## 8. Utilizando \`ps\` y \`cat\` en funciones
+## 7. Utilizando \`ps\` y \`cat\` en funciones
 
 Ya que conoces los comandos \`ps\` y \`cat\`, los integraremos en las funciones.
 
-### **Ejemplo 8:**
+### **Ejemplo 7:**
 ``` bash
 mostrar_usuarios_procesos() {
     ps -eo user | sort | uniq
@@ -178,7 +153,7 @@ mostrar_usuarios_procesos() {
 mostrar_usuarios_procesos
 ``` 
 
-### **Ejercicio 8:**
+### **Ejercicio 7:**
 Crea una función llamada \`mostrar_contenido\` que tome un nombre de archivo como parámetro y muestre su contenido utilizando \`cat\`. Asegúrate de que el archivo exista antes de mostrarlo.
 
 ---
