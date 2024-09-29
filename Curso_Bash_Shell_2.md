@@ -119,20 +119,25 @@ Modifica la función \`crear_archivo\` para que utilice una variable local que c
 
 ## 6. Funciones con múltiples parámetros
 
-Para acceder a todos los parámetros que recibe una función, utiliza \`$@\`.
+Para acceder a todos los parámetros que recibe una función, utiliza $num .
 
 ### **Ejemplo 7:**
 ```bash
+#!/bin/bash
+
+# Definir una función que toma dos argumentos
 sumar() {
-    suma=0
-    for numero in "$@"; do
-        suma=$((suma + numero))
-    done
-    echo "La suma es: $suma"
+    local a=$1  # Primer argumento
+    local b=$2  # Segundo argumento
+    local resultado=$((a + b))  # Sumar los dos argumentos
+    echo $resultado  # Devolver el resultado
 }
 
-# Llamar a la función con múltiples argumentos
-sumar 5 10 15
+# Llamar a la función con argumentos
+resultado_final=$(sumar 5 3)
+
+# Imprimir el resultado
+echo "La suma es: $resultado_final"
 ``` 
 ### **Ejercicio 6:**
 Escribe una función llamada \`buscar_texto\` que tome un archivo y una palabra como parámetros, y cuente cuántas veces aparece la palabra en el archivo usando \`grep\` y \`wc -l\`.
