@@ -254,9 +254,38 @@ Comandos para eliminar ficheros y directorios.
   rm -rf dir1
   ```
 
+## redirecciones
 
+Me redirije la información en vez de pantalla a un fichero
+>
+comando > fichero
 
+```bash
+ls > listado.txt
+```
+si yo vuelvo a redirigir la información de nuevo al ficheor listado.txt usando un > pierdo la información
 
+```bash
+tree > listado.txt
+```
+Para visualizar  el resultado puedes 
+```bash
+cat listado.txt
+```
+
+Para no perder la información debería utilizar >> que añade la información al final del fichero
+
+```
+ls > listado.txt
+tree >> listado txt
+cat listado.txt
+```
+
+#### echo
+Sirve para lanzar textos por consola
+```
+echo "hola"
+```
 ---
 ### Obtener un informe del disco
 
@@ -280,9 +309,11 @@ cat /proc/meminfo >> diagnostico.txt
 echo "Prueba de velocidad de disco:" >> diagnostico.txt
 hdparm -tT /dev/sda >> diagnostico.txt
 echo "Número de procesadores:" >> diagnostico.txt
-grep -c ^processor /proc/cpuinfo >> diagnostico.txt
+grep -c core /proc/cpuinfo >> diagnostico.txt
 ```
-### Ejercicio con tu compañero de al lado crea una tabla como esta donde compares aspectos del hardware
+### Ejercicio con tu compañero de al lado crea una tabla como esta donde compares aspectos del hardware utilizando 
+el script anterior copia el resultado de ambos en un fichero, puedes utilizar el comando nano para crear el fichero resumen
+
 
 | Característica      | Máquina 1           | Máquina 2           |
 |---------------------|---------------------|---------------------|
