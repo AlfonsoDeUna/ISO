@@ -111,23 +111,6 @@ Comandos para gestionar y visualizar la fecha y hora del sistema.
   ```bash
   date
   ```
-- **Colocar (ajustar) fecha y hora:**
-  ```bash
-  date 041217002011.00
-  ```
-
-## 7. Almanaques y Calendarios
-### Descripción:
-Comandos para obtener y visualizar almanaques y calendarios.
-
-- **Mostrar el almanaque de 2011:**
-  ```bash
-  cal 2011
-  ```
-- **Mostrar el almanaque para el mes de julio de 2011:**
-  ```bash
-  cal 07 2011
-  ```
 
 ## 8. Dispositivos de Bloque
 ### Descripción:
@@ -204,6 +187,10 @@ Comandos para listar el contenido de los directorios y mostrar detalles adiciona
 - **Listar recursivamente el contenido de un directorio y subdirectorios, incluyendo ocultos, separados por páginas:**
   ```bash
   ls -laR | less
+  ```
+  - ** Listar todos los ficheros del ordenador en rollo matrix
+  ```bash
+  ls / -laR
   ```
 
 ## 3. Visualización en Árbol
