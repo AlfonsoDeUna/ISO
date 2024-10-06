@@ -1,4 +1,7 @@
-# Comandos de Información del Sistema
+# Comandos Básicos y de Información del Sistema
+
+Estos comandos son útiles para realizar auditorías o ver si nuestra máquina está infectada
+Conocer información del hardware del equipo es algo muy necesario.
 
 ## 1. Arquitectura y Kernel del Sistema
 ### Descripción:
