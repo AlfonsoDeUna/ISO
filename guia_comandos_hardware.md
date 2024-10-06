@@ -133,11 +133,9 @@ Comando para obtener información sobre dispositivos de bloque como discos rígi
 - **Mostrar información sobre dispositivos de bloque (nombre, etiqueta, UUID, tipo de partición):**
   ```bash
   blkid
-
- ```
+  ```
 ---
-# Un poco de ficheros
-# Comandos de Gestión de Directorios y Ficheros
+# Comandos de Gestión de Directorios y Ficheros básico
 
 ## 1. Navegación entre Directorios
 ### Descripción:
