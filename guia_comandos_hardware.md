@@ -159,8 +159,11 @@ cat /proc/meminfo >> sistema_informe.txt
 ### Obtener un fichero auditoría de la máquina
 
 copia el bloque de comandos y pégalo en la terminal de Linux.
+Una vez lanzado en el terminal para visualizar el diagnóstico, podemos visualizar el fichero con el siguiente comando
 
-```
+cat diagnostico.txt
+
+```bash
 echo "Memoria disponible:" > diagnostico.txt
 cat /proc/meminfo >> diagnostico.txt
 echo "Prueba de velocidad de disco:" >> diagnostico.txt
