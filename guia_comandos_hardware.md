@@ -122,11 +122,27 @@ Comando para obtener información sobre dispositivos de bloque como discos rígi
   ```
 ---
 
-Para no perder la información debería utilizar >> que añade la información al final del fichero
+## Redirecciones 
+
+Las redirecciones en la terminal permiten enviar la salida de un comando a un archivo, en lugar de mostrarla directamente en la consola o el terminal. Existen dos tipos principales de redirecciones:
+
+a. Redirección de salida >
+Envía la salida de un comando a un archivo, sobrescribiendo su contenido si ya existe.
 
 ```
 ls > listado.txt
-tree >> listado txt
+```
+Este comando lista el contenido del directorio actual (con ls) para ver los ficheros y redirige el resultado a un archivo llamado listado.txt. Si el archivo ya existía, su contenido será reemplazado por el nuevo listado.
+
+b. Redirección de salida con apéndice >>
+Envía la salida de un comando a un archivo, pero en lugar de sobrescribir el archivo, añade el nuevo contenido al final de este.
+```
+tree >> listado.txt
+```
+El comando tree muestra una estructura en forma de árbol del directorio actual. Este comando añade ese resultado al final del archivo listado.txt, sin borrar lo que ya estaba allí previamente.
+
+Para visualizar lo que hemos escrito en el fichero listado.txt podemos utilizar el comando cat.
+```
 cat listado.txt
 ```
 
@@ -135,6 +151,8 @@ Sirve para lanzar textos por consola
 ```
 echo "hola"
 ```
+Este comando muestra el texto "hola" en la consola. La función principal de echo es simplemente lanzar o imprimir cualquier texto que se escriba.
+
 ---
 ### Obtener un informe del disco
 
