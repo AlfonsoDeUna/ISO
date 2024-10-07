@@ -138,6 +138,11 @@ echo "hola"
 ---
 ### Obtener un informe del disco
 
+copia y pega el siguiente bloque de comandos que guardan toda la información en un fichero.
+Una vez ejecutado y visualizar el fichero con la información puedes escribir en el terminal
+
+cat sistema_informe.txt
+
 ```bash
 echo "Informe del sistema generado el: $(date)" > sistema_informe.txt
 echo "Arquitectura y Kernel:" >> sistema_informe.txt
@@ -152,6 +157,9 @@ cat /proc/meminfo >> sistema_informe.txt
  ```
 
 ### Obtener un fichero auditoría de la máquina
+
+copia el bloque de comandos y pégalo en la terminal de Linux.
+
 ```
 echo "Memoria disponible:" > diagnostico.txt
 cat /proc/meminfo >> diagnostico.txt
@@ -160,15 +168,6 @@ hdparm -tT /dev/sda >> diagnostico.txt
 echo "Número de procesadores:" >> diagnostico.txt
 grep -c core /proc/cpuinfo >> diagnostico.txt
 ```
-### Ejercicio con tu compañero de al lado crea una tabla como esta donde compares aspectos del hardware utilizando 
-el script anterior copia el resultado de ambos en un fichero, puedes utilizar el comando nano para crear el fichero resumen
-
-
-| Característica      | Máquina 1           | Máquina 2           |
-|---------------------|---------------------|---------------------|
-| Kernel              | 5.10.0              | 5.4.0               |
-| Procesadores        | 4                   | 2                   |
-| Disco (vel. lectura)| 150 MB/s            | 120 MB/s            |
 
 ### Generar cada 5 segundos un informe de la memoria
 
