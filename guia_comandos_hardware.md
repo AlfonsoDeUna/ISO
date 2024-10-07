@@ -44,11 +44,11 @@ Comandos para obtener información sobre los componentes físicos (hardware) del
   ```
 - **Mostrar las características de un disco duro:**
   ```bash
-  hdparm -i /dev/hda
+  sudo hdparm -i /dev/sda
   ```
 - **Realizar prueba de lectura en un disco duro:**
   ```bash
-  hdparm -tT /dev/sda
+  sudo hdparm -tT /dev/sda
   ```
 - **Mostrar información sobre la CPU:**
   ```bash
@@ -70,7 +70,6 @@ Comandos para obtener información sobre los componentes físicos (hardware) del
 - **Listar el hardware completo del sistema:**
   ```bash
   lshw
-  discover
   ```
 
 ## 4. Memoria y Procesos del Sistema
@@ -85,10 +84,6 @@ Comandos para verificar el estado de la memoria, procesos y swap del sistema.
   ```bash
   cat /proc/swaps
   ```
-- **Mostrar las interrupciones del sistema:**
-  ```bash
-  cat /proc/interrupts
-  ```
 
 ## 5. Sistema de Archivos y Dispositivos de Red
 ### Descripción:
@@ -97,11 +92,9 @@ Comandos para obtener información sobre el sistema de archivos y las interfaces
 - **Mostrar adaptadores de red y estadísticas:**
   ```bash
   cat /proc/net/dev
+  sudo tcpdump
   ```
-- **Mostrar el sistema de archivos montado:**
-  ```bash
-  cat /proc/mounts
-  ```
+
 
 ## 6. Fecha y Hora del Sistema
 ### Descripción:
@@ -111,16 +104,15 @@ Comandos para gestionar y visualizar la fecha y hora del sistema.
   ```bash
   date
   ```
+  **Mostrar la fecha en modo calendario**
 
-## 8. Dispositivos de Bloque
-### Descripción:
-Comando para obtener información sobre dispositivos de bloque como discos rígidos.
-
-- **Mostrar información sobre dispositivos de bloque (nombre, etiqueta, UUID, tipo de partición):**
   ```bash
-  blkid
+  cal
+
+  cal 2024
+
+  cal 07 2024
   ```
----
 
 ## Redirecciones 
 
@@ -182,16 +174,28 @@ Una vez lanzado en el terminal para visualizar el diagnóstico, podemos visualiz
 cat diagnostico.txt
 
 ```bash
-echo "Memoria disponible:" > diagnostico.txt
+echo "INFORME DE LA MEMORIA DEL ORDENADOR:" > diagnostico.txt
 cat /proc/meminfo >> diagnostico.txt
-echo "Prueba de velocidad de disco:" >> diagnostico.txt
-hdparm -tT /dev/sda >> diagnostico.txt
-echo "Número de procesadores:" >> diagnostico.txt
-grep -c core /proc/cpuinfo >> diagnostico.txt
+echo "INFORME DEL MICROPROCESADOR:" >> diagnostico.txt
+cat /proc/cpuinfo >> diagnostico.txt
 ```
 
-### Generar cada 5 segundos un informe de la memoria
+### Generar cada segundo un informe de la memoria
 
+```bash
+watch -n 1 "date; echo 'Uso de Memoria:'; cat /proc/meminfo"
 ```
-watch -n 5 "date; echo 'Uso de Memoria:'; cat /proc/meminfo; echo 'Interrupciones:'; cat /proc/interrupts"
+
+### Conocer los usuarios conectados al sistema y estadísticas
+
+
+```bash
+w
 ```
+
+### Mostrar todos los discos duros y sus particiones
+
+```bash
+fdisk -l
+```
+
