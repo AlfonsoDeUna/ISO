@@ -188,14 +188,8 @@ watch -n 1 "date; echo 'Uso de Memoria:'; cat /proc/meminfo"
 
 ### Conocer los usuarios conectados al sistema y estadísticas
 
-
 ```bash
 w
 ```
 
-### Mostrar todos los discos duros y sus particiones
-
-```bash
-sudo fdisk -l
-```
 
