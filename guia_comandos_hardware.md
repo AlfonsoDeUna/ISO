@@ -40,7 +40,7 @@ Comandos para obtener información sobre los componentes físicos (hardware) del
 
 - **Mostrar los componentes del hardware del sistema:**
   ```bash
-  dmidecode -q
+  sudo dmidecode -q
   ```
 - **Mostrar las características de un disco duro:**
   ```bash
