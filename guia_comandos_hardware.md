@@ -196,6 +196,6 @@ w
 ### Mostrar todos los discos duros y sus particiones
 
 ```bash
-fdisk -l
+sudo fdisk -l
 ```
 
