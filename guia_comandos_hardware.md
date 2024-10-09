@@ -85,7 +85,7 @@ Comandos para verificar el estado de la memoria, procesos y swap del sistema.
   cat /proc/swaps
   ```
 
-## 5. Sistema de Archivos y Dispositivos de Red
+## 5. Dispositivos de Red
 ### Descripción:
 Comandos para obtener información sobre el sistema de archivos y las interfaces de red.
 
