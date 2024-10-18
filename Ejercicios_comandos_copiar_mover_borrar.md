@@ -43,6 +43,8 @@ touch EJERCICIO/backup/informe.txt
 
 touch EJERCICIO/fotos/imagen1.jpg
 
+touch EJERCICIO/documento.txt
+
 touch EJERCICIO/temporal/archivo_temporal.txt
 
 touch EJERCICIO/mis_proyectos/archivo1.txt
