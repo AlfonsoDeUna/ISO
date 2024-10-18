@@ -13,7 +13,7 @@ El siguiente script te crea una estructura de directorios y ficheros para poder 
 [#!/bin/bash
 
 # Crear el directorio principal
-mkdir -p /home/usuario/EJERCICIO
+mkdir -p EJERCICIO
 
 # Crear los directorios necesarios dentro del directorio principal
 mkdir -p EJERCICIO/documentos
