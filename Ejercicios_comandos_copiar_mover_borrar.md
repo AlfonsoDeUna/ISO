@@ -1,11 +1,12 @@
 # Ejercicios para copiar mover y borrar en linux
 
 ## Tutorial para realizar los ejercicios
-https://github.com/AlfonsoDeUna/ISO/blob/main/guia_comandos_copiar_mover_borrar.md
+
+* https://github.com/AlfonsoDeUna/ISO/blob/main/guia_comandos_copiar_mover_borrar.md
+
 ---
 
 ### Script de inicio
-
 El siguiente script te crea una estructura de directorios y ficheros para poder realizar la práctica
 
 ```bash
