@@ -76,6 +76,7 @@ Revisa que ha creado la estructura
 ### Ejercicios con cp:
 
 * Copia un archivo: Utiliza cp para copiar el archivo documento.txt en el mismo directorio con el nombre copia_documento.txt.
+* (comprueba que existe el fichero sino te lo creas con el comando touch documento.txt)
 
 * Copia interactiva: Copia archivo1.txt a archivo2.txt pero que te pregunte si quieres sobrescribir archivo2.txt si ya existe.
 
