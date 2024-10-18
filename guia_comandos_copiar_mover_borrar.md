@@ -1,4 +1,4 @@
-# Resumen: Uso de `cp -u *.html destination` y Comodines en el Shell
+# Guia de comandos de copiar, mover y borrar
 
 ## Copiar Archivos Usando `cp -u`
 El comando `cp -u *.html destination` copia todos los archivos con extensión `.html` al directorio `destination`. La opción `-u` indica que solo copiará archivos que no existen en el destino o aquellos más recientes que los ya presentes.
