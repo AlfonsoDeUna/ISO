@@ -10,48 +10,48 @@
 El siguiente script te crea una estructura de directorios y ficheros para poder realizar la práctica
 
 ```bash
-#!/bin/bash
+[#!/bin/bash
 
 # Crear el directorio principal
 mkdir -p /home/usuario/EJERCICIO
 
 # Crear los directorios necesarios dentro del directorio principal
-mkdir -p /home/usuario/EJERCICIO/documentos
-mkdir -p /home/usuario/EJERCICIO/proyectos/proyecto1
-mkdir -p /home/usuario/EJERCICIO/proyectos/proyecto2
-mkdir -p /home/usuario/EJERCICIO/backup
-mkdir -p /home/usuario/EJERCICIO/fotos
-mkdir -p /home/usuario/EJERCICIO/temporal
-mkdir -p /home/usuario/EJERCICIO/mis_proyectos/directorio1
-mkdir -p /home/usuario/EJERCICIO/finalizados
+mkdir -p EJERCICIO/documentos
+mkdir -p EJERCICIO/proyectos/proyecto1
+mkdir -p EJERCICIO/proyectos/proyecto2
+mkdir -p EJERCICIO/backup
+mkdir -p EJERCICIO/fotos
+mkdir -p EJERCICIO/temporal
+mkdir -p EJERCICIO/mis_proyectos/directorio1
+mkdir -p EJERCICIO/finalizados
 
 # Crear los archivos dentro de los directorios especificados
-touch /home/usuario/EJERCICIO/documentos/archivo1.txt
-touch /home/usuario/EJERCICIO/documentos/archivo2.txt
-touch /home/usuario/EJERCICIO/documentos/imagen1.jpg
-touch /home/usuario/EJERCICIO/documentos/imagen2.jpg
-touch /home/usuario/EJERCICIO/documentos/notas.txt
+touch EJERCICIO/documentos/archivo1.txt
+touch EJERCICIO/documentos/archivo2.txt
+touch EJERCICIO/documentos/imagen1.jpg
+touch EJERCICIO/documentos/imagen2.jpg
+touch EJERCICIO/documentos/notas.txt
 
-touch /home/usuario/EJERCICIO/proyectos/proyecto1/archivo1.txt
-touch /home/usuario/EJERCICIO/proyectos/proyecto1/archivo2.txt
-touch /home/usuario/EJERCICIO/proyectos/proyecto2/script.sh
-touch /home/usuario/EJERCICIO/proyectos/proyecto2/datos.csv
+touch EJERCICIO/proyectos/proyecto1/archivo1.txt
+touch EJERCICIO/proyectos/proyecto1/archivo2.txt
+touch EJERCICIO/proyectos/proyecto2/script.sh
+touch EJERCICIO/proyectos/proyecto2/datos.csv
 
-touch /home/usuario/EJERCICIO/backup/archivo1.txt
-touch /home/usuario/EJERCICIO/backup/archivo2.txt
-touch /home/usuario/EJERCICIO/backup/informe.txt
+touch EJERCICIO/backup/archivo1.txt
+touch EJERCICIO/backup/archivo2.txt
+touch EJERCICIO/backup/informe.txt
 
-touch /home/usuario/EJERCICIO/fotos/imagen1.jpg
+touch EJERCICIO/fotos/imagen1.jpg
 
-touch /home/usuario/EJERCICIO/temporal/archivo_temporal.txt
+touch EJERCICIO/temporal/archivo_temporal.txt
 
-touch /home/usuario/EJERCICIO/mis_proyectos/archivo1.txt
-touch /home/usuario/EJERCICIO/mis_proyectos/archivo2.txt
-touch /home/usuario/EJERCICIO/mis_proyectos/directorio1/subarchivo1.txt
-touch /home/usuario/EJERCICIO/mis_proyectos/directorio1/subarchivo2.txt
+touch EJERCICIO/mis_proyectos/archivo1.txt
+touch EJERCICIO/mis_proyectos/archivo2.txt
+touch EJERCICIO/mis_proyectos/directorio1/subarchivo1.txt
+touch EJERCICIO/mis_proyectos/directorio1/subarchivo2.txt
 
 # Mensaje de finalización
-echo "Estructura de directorios y archivos dentro de /home/usuario/EJERCICIO creada exitosamente."
+echo "Estructura de directorios y archivos dentro de /home/usuario/EJERCICIO creada exitosamente."](https://github.com/AlfonsoDeUna/ISO/blob/main/guia_comandos_copiar_mover_borrar.md)
 ```
 
 para poder ejecutarlo hay que darle permiso de ejecución
