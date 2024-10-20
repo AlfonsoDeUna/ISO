@@ -226,18 +226,6 @@
       - Si es `eliminar`, elimina el archivo o directorio.
     - Asegúrate de manejar casos donde los argumentos no sean correctos.
 
-### **8. Conclusión de la Clase**
-
-- **Resumen de lo Aprendido:**
-  - Uso y asignación de variables en Bash.
-  - Implementación de condicionales `if` para tomar decisiones.
-  - Utilización de argumentos posicionales `$1`, `$2` para scripts más dinámicos.
-- **Preguntas y Respuestas:**
-  - Espacio para aclarar dudas y profundizar en temas.
-- **Próximos Pasos:**
-  - Introducción a bucles (`for`, `while`).
-  - Manejo de funciones en scripts de Bash.
-
 ---
   
   ```bash
