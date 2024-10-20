@@ -47,8 +47,6 @@
   - **Instrucciones:**
     - Crea una variable llamada `mi_directorio` y asígnale la ruta de un directorio existente.
     - Usa `cd` para navegar a ese directorio y muestra su contenido con `ls`.
-  - **Objetivo:**
-    - Practicar la asignación y uso de variables con comandos conocidos.
 
 ### **3. Lectura de Entrada del Usuario**
 
@@ -70,8 +68,6 @@
   - **Instrucciones:**
     - Escribe un script que solicite al usuario un nombre de archivo.
     - Usa `ls` para verificar si el archivo existe en el directorio actual.
-  - **Objetivo:**
-    - Interactuar con el usuario y utilizar variables para almacenar su entrada.
 
 ### **4. Condicionales: Uso del 'if'**
 
@@ -121,8 +117,6 @@
     - Crea un script que pida al usuario un nombre de directorio.
     - Si el directorio existe, muestra su contenido con `ls`.
     - Si no existe, créalo usando `mkdir` y confirma su creación.
-  - **Objetivo:**
-    - Aplicar condicionales para tomar decisiones basadas en la existencia de directorios.
 
 ### **5. Argumentos Posicionales en Bash ($1, $2, ...)**
 
