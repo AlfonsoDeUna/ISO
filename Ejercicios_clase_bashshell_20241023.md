@@ -25,14 +25,16 @@ ejemplo para saber si el usuario pulsó la opción 1 if [ "$opcion" -eq 1 ]; the
 
 4. Crear un script que verifique si un archivo existe en el directorio actual.
 Pregunta al usuario el nombre dle fichero y crea una variable llamada archivo con la respuesta del usuario
-tienes que utilizar el if [ -e "$archivo" ]; then
+tienes que utilizar el
+* if [ -e "$archivo" ]; then
 
 ```bash
 
 ```
 
 5. Crear un script que reciba dos argumentos y copie un archivo de un directorio a otro.
-comprueba que llegan dos argumentos if [ $# -ne 2 ]; then
+comprueba que llegan dos argumentos
+* if [ $# -ne 2 ]; then
 utiliza el comando cp para copiar
 
 ```bash
@@ -47,7 +49,8 @@ utiliza el comando cp para copiar
 
 7. Crear un script que compare dos archivos y muestre si son idénticos o no.
 Que el usuario ponga el nombre de dos archivos
-PAra comparar dos archivos usaremos el comando cmp del siguiente modo: if cmp -s "$1" "$2"; 
+PAra comparar dos archivos usaremos el comando cmp del siguiente modo:
+* if cmp -s "$1" "$2"; 
 
 ```bash
 
