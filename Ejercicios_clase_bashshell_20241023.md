@@ -25,7 +25,7 @@ ejemplo para saber si el usuario pulsó la opción 1 if [ "$opcion" -eq 1 ]; the
 
 4. Crear un script que verifique si un archivo existe en el directorio actual.
 Pregunta al usuario el nombre dle fichero y crea una variable llamada archivo con la respuesta del usuario
-tienes que utilizar el
+tienes que utilizar el:
 * if [ -e "$archivo" ]; then
 
 ```bash
@@ -35,7 +35,7 @@ tienes que utilizar el
 5. Crear un script que reciba dos argumentos y copie un archivo de un directorio a otro.
 comprueba que llegan dos argumentos
 * if [ $# -ne 2 ]; then
-utiliza el comando cp para copiar
+* utiliza el comando cp para copiar
 
 ```bash
 
