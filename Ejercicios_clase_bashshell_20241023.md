@@ -2,7 +2,9 @@
 
 1. Crea un script que liste los directorios actuales y muestre los procesos
 ```bash
-
+#!/bin/bash
+ls
+ps
 ```
 
 2. Crea un script que muestre un menú y que el usuario seleccione la opción y muestres la opcion que seleccionó el usuario
