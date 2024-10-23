@@ -7,10 +7,10 @@
 
 2. Crea un script que muestre un menú y que el usuario seleccione la opción y muestres la opcion que seleccionó el usuario
 ejemplo para saber si el usuario pulsó la opción 1 if [ "$opcion" -eq 1 ]; then
-**ejemplo de menu:**
-1. listar directorio
-2. copiar ficheros
-3. mover ficheros
+* **ejemplo de menu:**
+* 1. listar directorio
+* 2. copiar ficheros
+* 3. mover ficheros
 
 ```bash
 
