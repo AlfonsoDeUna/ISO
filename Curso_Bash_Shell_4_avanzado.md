@@ -1,7 +1,7 @@
 # Curso de Bash Shell: Funciones en Bash Shell en Unix
 
 ## Introducción
-En este curso aprenderás a crear y utilizar funciones en Bash Shell dentro de entornos Unix. A través de ejemplos explicados y ejercicios prácticos, aprenderás a estructurar y reutilizar código eficientemente para optimizar la creación y mantenimiento de scripts.
+Vamos a ver cómo crear y utilizar funciones en Bash Shell dentro de entornos Unix. A través de ejemplos explicados y ejercicios prácticos, aprenderás a estructurar y reutilizar código eficientemente para optimizar la creación y mantenimiento de scripts.
 
 ## Objetivos de Aprendizaje
 1. Comprender qué es una función en Bash y cómo definirla.
