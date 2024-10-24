@@ -153,6 +153,7 @@ echo "Todos los argumentos: $@"
 **Ejecutando el script:**
 
 ```bash
+chmod +x script.sh
 ./script.sh uno dos
 ```
 
