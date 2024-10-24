@@ -20,7 +20,7 @@ fi
 - **`then`**: Indica el inicio del bloque de código que se ejecutará si la condición es verdadera.
 - **`elif`**: (Opcional) Permite evaluar una nueva condición si la anterior es falsa.
 - **`else`**: (Opcional) Bloque que se ejecuta si ninguna de las condiciones anteriores es verdadera.
-- **`fi`**: Marca el final de la estructura `if`.
+- **`fi`**: Marca el final de la estructura `if`. 
 
 ## **2. Comparaciones numéricas**
 
@@ -54,6 +54,23 @@ fi
 - Se compara el valor de la variable `numero` con 10.
 - Se ejecuta el bloque correspondiente según el resultado de la comparación.
 
+---
+## Ejercicios basados en la comparación de números:
+### 1. Modifica el script original para que identifique si un número es mayor, meno o igual:
+
+* El usuario ingrese un número por teclado.
+* El script verifique si el número es mayor, menor o igual a 100.
+* Muestre un mensaje que indique si es mayoro o  menos o igual a 100.
+
+### 2. Modifica el script original para que identifique si un número es positivo, negativo o cero
+
+### 3. Modifica el script original para que:
+
+* El usuario ingrese dos números: numero1 y numero2.
+* El script compare los dos números e indique cuál es mayor o si son iguales.
+* Muestre un mensaje correspondiente.
+---
+
 ## **3. Comparaciones de cadenas de texto**
 
 Para comparar cadenas de texto, se utilizan los siguientes operadores:
@@ -76,11 +93,27 @@ elif [ "$cadena" != "hola" ]; then
     echo "La cadena no es 'hola'."
 fi
 ```
+---
+## Ejercicios de comparación de cadenas o texto:
 
 **Explicación:**
 
 - Se compara el contenido de la variable `cadena` con la cadena `"hola"`.
 - Se utiliza `=` para comprobar igualdad y `!=` para desigualdad.
+
+  ### Ejercicio 1: Comparar la cadena ingresada por el usuario
+
+* El usuario ingrese una cadena de texto.
+* El script compare la cadena ingresada con la palabra "hola".
+* Muestre un mensaje indicando si la cadena es "hola" o no.
+
+### Ejercicio 2: Verificar si la cadena está vacía o no
+
+* El usuario ingrese una cadena de texto.
+* El script verifique si la cadena está vacía.
+* Muestre un mensaje indicando si la cadena está vacía o no.
+
+---
 
 ## **4. Comprobación de ficheros y directorios**
 
