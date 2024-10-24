@@ -291,43 +291,7 @@ Argumento 2: banana
 Argumento 3: cereza
 ```
 
-## **5. Shift: Desplazamiento de Argumentos**
-
-El comando `shift` se utiliza para desplazar los argumentos posicionales hacia la izquierda.
-
-### **Ejemplo:**
-
-```bash
-#!/bin/bash
-
-while [ $# -gt 0 ]; do
-    echo "Argumento: $1"
-    shift
-done
-```
-
-**Explicación:**
-
-- Mientras el número de argumentos (`$#`) sea mayor que 0, ejecuta el bucle.
-- Muestra el primer argumento (`$1`).
-- Utiliza `shift` para mover los argumentos: `$2` pasa a ser `$1`, `$3` a `$2`, etc.
-- Disminuye el contador `$#`.
-
-**Ejecutando el script:**
-
-```bash
-./shift_demo.sh uno dos tres
-```
-
-**Salida:**
-
-```
-Argumento: uno
-Argumento: dos
-Argumento: tres
-```
-
-## **6. Buenas Prácticas con Variables**
+## **5. Buenas Prácticas con Variables**
 
 - **Nombrado Claro:** Utiliza nombres de variables descriptivos.
 - **Comillas:** Usa comillas dobles alrededor de variables (`"$variable"`) para evitar problemas con espacios o caracteres especiales.
@@ -335,7 +299,7 @@ Argumento: tres
 - **Inicializar Variables:** Es buena práctica inicializar variables antes de usarlas.
 - **Comentarios:** Añade comentarios para explicar el propósito de las variables.
 
-## **8. Ejercicios Prácticos para los Alumnos**
+## **7. Ejercicios Prácticos para los Alumnos**
 
 ### **Ejercicio 1: Calculadora Simple**
 
