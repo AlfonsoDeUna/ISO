@@ -199,6 +199,7 @@ echo "La suma de $numero1 y $numero2 es: $suma"
 **Ejecutando el script:**
 
 ```bash
+chmod +x suma.sh
 ./suma.sh 5 7
 ```
 
@@ -206,90 +207,6 @@ echo "La suma de $numero1 y $numero2 es: $suma"
 
 ```
 La suma de 5 y 7 es: 12
-```
-
-### **4.2. Script que Saluda al Usuario**
-
-**Script (`saludo.sh`):**
-
-```bash
-#!/bin/bash
-
-nombre=$1
-
-if [ -z "$nombre" ]; then
-    read -p "Ingrese su nombre: " nombre
-fi
-
-echo "Hola, $nombre"
-```
-
-**Explicación:**
-
-- Toma el primer argumento como el nombre.
-- Si el nombre está vacío (`-z` verifica si la longitud de la cadena es cero), pide al usuario que ingrese su nombre.
-- Muestra un saludo.
-
-**Ejecutando el script sin argumentos:**
-
-```bash
-./saludo.sh
-```
-
-**Salida:**
-
-```
-Ingrese su nombre: María
-Hola, María
-```
-
-**Ejecutando el script con un argumento:**
-
-```bash
-./saludo.sh Juan
-```
-
-**Salida:**
-
-```
-Hola, Juan
-```
-
-### **4.3. Script que Procesa Múltiples Argumentos**
-
-**Script (`lista_argumentos.sh`):**
-
-```bash
-#!/bin/bash
-
-echo "Número de argumentos: $#"
-
-contador=1
-for arg in "$@"; do
-    echo "Argumento $contador: $arg"
-    contador=$((contador + 1))
-done
-```
-
-**Explicación:**
-
-- Muestra el número de argumentos.
-- Utiliza un bucle `for` para iterar sobre todos los argumentos (`$@`).
-- Muestra cada argumento con su número correspondiente.
-
-**Ejecutando el script:**
-
-```bash
-./lista_argumentos.sh manzana banana cereza
-```
-
-**Salida:**
-
-```
-Número de argumentos: 3
-Argumento 1: manzana
-Argumento 2: banana
-Argumento 3: cereza
 ```
 
 ## **5. Buenas Prácticas con Variables**
@@ -300,57 +217,3 @@ Argumento 3: cereza
 - **Inicializar Variables:** Es buena práctica inicializar variables antes de usarlas.
 - **Comentarios:** Añade comentarios para explicar el propósito de las variables.
 
-## **7. Ejercicios Prácticos para los Alumnos**
-
-### **Ejercicio 1: Calculadora Simple**
-
-Crea un script que reciba tres argumentos:
-
-1. Un número.
-2. Un operador (`+`, `-`, `*`, `/`).
-3. Otro número.
-
-El script debe realizar la operación y mostrar el resultado.
-
-**Ejemplo de uso:**
-
-```bash
-./calculadora.sh 10 + 5
-Resultado: 15
-```
-
-**Pista:**
-
-- Utiliza `case` o `if` para manejar el operador.
-- Realiza las operaciones con `expr` o `(( ))`.
-
-### **Ejercicio 2: Contar Archivos en un Directorio**
-
-Crea un script que reciba un directorio como argumento y muestre los archivos que contiene.
-
-**Ejemplo de uso:**
-
-```bash
-./contar_archivos.sh /home/usuario
-obtenemos la salida del comando ls
-```
-
-**Pista:**
-
-- Verifica que se haya proporcionado un argumento.
-- Utiliza `ls`.
-
-### **Ejercicio 3: Conversión de Unidades**
-
-Crea un script que convierta una cantidad de metros a centímetros y milímetros. El número de metros se pasará como argumento.
-
-**Ejemplo de uso:**
-
-```bash
-./convertir_unidades.sh 5
-5 metros son 500 centímetros y 5000 milímetros.
-```
-
-**Pista:**
-
-- Realiza multiplicaciones simples.
