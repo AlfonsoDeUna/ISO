@@ -93,15 +93,14 @@ elif [ "$cadena" != "hola" ]; then
     echo "La cadena no es 'hola'."
 fi
 ```
----
-## Ejercicios de comparación de cadenas o texto:
-
 **Explicación:**
 
 - Se compara el contenido de la variable `cadena` con la cadena `"hola"`.
 - Se utiliza `=` para comprobar igualdad y `!=` para desigualdad.
 
-  ### Ejercicio 1: Comparar la cadena ingresada por el usuario
+---
+## Ejercicios de comparación de cadenas o texto:
+### Ejercicio 1: Comparar la cadena ingresada por el usuario
 
 * El usuario ingrese una cadena de texto.
 * El script compare la cadena ingresada con la palabra "hola".
