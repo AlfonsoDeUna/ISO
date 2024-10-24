@@ -75,109 +75,23 @@ read nombre
 echo "Hola, $nombre!"
 ```
 
-### 4. Introducción al comando `ps`
-El comando `ps` muestra información sobre los procesos activos en el sistema.
-
-Para ver los procesos asociados a tu sesión:
-
-```bash
-ps
-```
-
-Para ver una lista completa de procesos:
-
-```bash
-ps aux
-```
-
-### 5. Creando un menú simple en Bash
-Vamos a crear un script que muestra un menú interactivo al usuario.
-
-#### Paso 1: Crear el script
-Crea un archivo llamado `menu.sh`:
-
-```bash
-nano menu.sh
-```
-
-#### Paso 2: Escribir el script
-Escribe el siguiente código en `menu.sh`:
-
-```bash
-#!/bin/bash
-
-echo "========================="
-echo "       Menú Principal    "
-echo "========================="
-echo "1. Mostrar fecha y hora"
-echo "2. Listar archivos en el directorio actual"
-echo "3. Ver procesos activos"
-echo "4. Salir"
-
-echo -n "Elige una opción: "
-read opcion
-
-case $opcion in
-    1)
-        echo "La fecha y hora actual es: $(date)"
-        ;;
-    2)
-        echo "Archivos en el directorio actual:"
-        ls
-        ;;
-    3)
-        echo "Procesos activos:"
-        ps aux
-        ;;
-    4)
-        echo "Saliendo..."
-        ;;
-    *)
-        echo "Opción no válida. Por favor, elige una opción del 1 al 4."
-        ;;
-esac
-```
-
-#### Paso 3: Hacer el script ejecutable
-Guarda el archivo y luego hazlo ejecutable:
-
-```bash
-chmod +x menu.sh
-```
 
 #### Paso 4: Ejecutar el script
 Ejecuta el script en la terminal:
+
+primero tienes que darle permisos de ejecución
+
+```bash
+chmod +x script.sh
+```
+
+Para ejecutar el script tienes lanzarlo con ./ junto con el nombre del script
 
 ```bash
 ./menu.sh
 ```
 
-Interactúa con el menú seleccionando diferentes opciones.
 
-### Ejercicios
 
-1. **Crear y editar un archivo**:
-   - Crea un archivo llamado `tareas.txt`.
-   - Abre el archivo con `nano` y escribe una lista de tareas pendientes.
-   - Guarda y cierra el archivo.
-   - Muestra el contenido del archivo usando `cat`.
 
-2. **Modificar el menú**:
-   - Añade una nueva opción al menú que permita al usuario ver el contenido de `tareas.txt`.
-   - *Tip*: Agrega una opción 5 y ajusta el `case` para manejarla.
 
-3. **Explorar el comando `ps`**:
-   - Ejecuta `ps aux` y redirige la salida a un archivo llamado `procesos.txt`:
-
-   ```bash
-   ps aux > procesos.txt
-   ```
-
-   - Abre `procesos.txt` con `nano` y observa los procesos listados.
-
-4. **Personalizar el saludo**:
-   - Al inicio del script `menu.sh`, solicita al usuario que ingrese su nombre y almacénalo en una variable.
-   - Modifica el menú para que incluya un saludo personalizado usando esa variable.
-
-### Resumen
-En este capítulo, hemos introducido los conceptos básicos de Bash Shell, incluyendo cómo crear y manipular archivos, usar el comando `echo`, trabajar con variables y utilizar el comando `ps` para ver procesos activos. También hemos creado un menú simple que interactúa con el usuario y realiza diferentes acciones según la opción seleccionada.
