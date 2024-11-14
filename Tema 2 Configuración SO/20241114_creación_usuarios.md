@@ -3,8 +3,6 @@
 * Utilizamos el comando: **useradd**
 * Puedes utilizas `adduser` es un script de perl que puedes añadir más información del usuario en la creación pero no es un comando
 
-
-
 #### Crear un usuario básico
 ``` bash
 sudo useradd usuario1
@@ -74,6 +72,15 @@ cat /etc/passwd
 | **HomeDirectory** | Especifica el nombre completo de la vía de acceso del directorio de inicio del usuario. Si el usuario no tiene un directorio de inicio definido, se utiliza el directorio de inicio del usuario invitado. El valor es una serie de caracteres.  |
 | **Shell**        | Especifica el programa inicial o shell que se ejecuta después de que un usuario invoque el mandato inicio de sesión o el mandato `su`. Si un usuario no tiene un shell definido, se utiliza `/usr/bin/sh`, el shell del sistema. El valor es una serie de caracteres que puede contener argumentos para pasar al programa inicial. |
 
+### Ejemplos para visualizar información de los usuarios a través del fichero passwd
+#### Visualizar el nombre de los usuarios
+```bash
+cat /etc/passwd | cut -d: -f1
+```
+#### Buscar un usuario en el fichero passwd
+```bash
+cat /etc/passwd | grep usuario1
+```
 
 ## BORRRAR USUARIOS
 
