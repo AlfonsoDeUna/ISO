@@ -99,6 +99,11 @@ cat /etc/passwd | cut -d: -f1
 cat /etc/passwd | grep usuario1
 ```
 
+#### Ver todos los usuarios que comienzan por usu
+```bash
+cat /etc/passwd | grep usu*
+```
+
 ## BORRRAR USUARIOS
 
 Borrar usuario1 y su directorio home
