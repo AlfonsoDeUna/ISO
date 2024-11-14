@@ -34,7 +34,10 @@ sudo useradd -m -g grupo1 usuario5
 #### Crear un usuario y añadirlo a varios grupos secundarios
 ```bash
 sudo useradd -m -G sudo,docker usuario6
+```
 useradd: el grupo «docker» no existe
+**solución:**
+```
 sudo groupadd docker
 sudo useradd -m -G sudo,docker usuario6
 ```
