@@ -91,8 +91,8 @@ lastlog -u usuario
 ```
 #### Mostrar información sobre las contraseñas de los usuarios
 ```bash
+passwd -S -a
 ```
-
 #### Explicación de cada campo en la salida
 * Nombre del usuario: El primer campo muestra el nombre de usuario (por ejemplo, usuario1, usuario2).
 * Estado de la contraseña: El segundo campo muestra el estado de la contraseña, y puede tener varios valores:
