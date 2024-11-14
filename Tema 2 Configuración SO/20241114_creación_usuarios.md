@@ -12,11 +12,11 @@ sudo useradd -m -d /home/usuario_personalizado usuario2
 ``` bash
 sudo useradd -m -s /bin/bash usuario3
 ```
-7. Crear un usuario con un grupo predeterminado
+7. Crear un usuario con un grupo primario
 ``` bash
 sudo useradd -m -g grupo1 usuario5
 ```
-9. Crear un usuario y añadirlo a varios grupos
+9. Crear un usuario y añadirlo a varios grupos secundarios
 ```bash
 sudo useradd -m -G sudo,docker usuario6
 ```
