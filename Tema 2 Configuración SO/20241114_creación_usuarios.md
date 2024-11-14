@@ -62,14 +62,13 @@ sudo passwd usuario8
 ``` bash
 sudo passwd -e usuario8
 ```
-#### Crear un usuario con un grupo secundario y un grupo principal personalizado
-``` bash
-sudo useradd -m -g developers -G sudo usuario12
-```
+
 #### crear un usuario con privilegios de root en linux
 ```bash
 useradd -u 0 -o -g 0 usuarioroot
+passwd usuarioroot
 ```
+*Realiza un su de usuarioroot para que ver que es root*
 
 # /etc/passwd
 Fichero con información de los usuarios
