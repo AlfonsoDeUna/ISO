@@ -175,8 +175,8 @@ usermod -a -G Marketing usuario2
 crear un nuevo usuario llamado asir en el sistema para un proyecto específico. Este usuario necesita lo siguiente:
 
 * Un directorio home personalizado en /home/asir1.
-*La shell /bin/bash como shell de inicio.
-*Un grupo primario propio y dos grupos secundarios, sudo y proxmox. (Si el grupo proxmox no existe, créalo).
+* La shell /bin/bash como shell de inicio.
+* Un grupo primario propio y dos grupos secundarios, sudo y proxmox. (Si el grupo proxmox no existe, créalo).
 * Un comentario que indique: "Usuario del proyecto asir".
 * Una contraseña asignada inmediatamente después de crear el usuario.
 * Configuración para forzar el cambio de contraseña en su primer inicio de sesión.
