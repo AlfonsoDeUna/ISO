@@ -11,6 +11,12 @@ sudo useradd usuario1
 ```bash
 sudo adduser ejemplo
 ```
+
+### Ver todas las opciones del comando useradd
+```
+sudo grep ^usu /etc/passwd
+```
+
 #### Crear un usuario y especificar su directorio home
  ``` bash
 sudo useradd -m -d /home/usuario_personalizado usuario2
