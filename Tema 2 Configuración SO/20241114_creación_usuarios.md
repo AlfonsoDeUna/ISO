@@ -96,11 +96,11 @@ passwd -S -a
 #### Explicación de cada campo en la salida
 * Nombre del usuario: El primer campo muestra el nombre de usuario (por ejemplo, usuario1, usuario2).
 * Estado de la contraseña: El segundo campo muestra el estado de la contraseña, y puede tener varios valores:
- * P: La contraseña está configurada y activa.
- * L: La cuenta está bloqueada (el usuario no puede iniciar sesión).
- * NP: No hay ninguna contraseña configurada para el usuario (puede ser una cuenta de servicio o de sistema).
- * LK: La cuenta está bloqueada (puede variar según la distribución de Linux).
-* Última modificación de la contraseña: El tercer campo muestra la última fecha en que se cambió la contraseña, en formato DD/MM/AAAA.
+  * P: La contraseña está configurada y activa.
+  * L: La cuenta está bloqueada (el usuario no puede iniciar sesión).
+  * NP: No hay ninguna contraseña configurada para el usuario (puede ser una cuenta de servicio o de sistema).
+  * LK: La cuenta está bloqueada (puede variar según la distribución de Linux).
+ * Última modificación de la contraseña: El tercer campo muestra la última fecha en que se cambió la contraseña, en formato DD/MM/AAAA.
 * Días mínimos: El cuarto campo indica el número mínimo de días que el usuario debe esperar antes de poder cambiar su contraseña de nuevo. Un valor de 0 significa que no hay restricción.
 * Días máximos: El quinto campo muestra el número máximo de días que la contraseña puede ser usada antes de requerir un cambio. Un valor de 99999 significa que la contraseña no expirará.
 * Días de advertencia: El sexto campo indica el número de días antes de que expire la contraseña que el sistema advertirá al usuario. Un valor de 7 significa que el usuario será advertido siete días antes de que su contraseña expire.
