@@ -37,7 +37,7 @@ sudo rm -rd usuario_personalizado
 
 #### Cambiar el directorio home de un usuario
 ```bash
-sudo userdmod -d /home/usuario2 usuario2
+sudo usermod -d /home/usuario2 usuario2
 ```
 #### Crear un usuario y definir su shell de inicio
 ``` bash
