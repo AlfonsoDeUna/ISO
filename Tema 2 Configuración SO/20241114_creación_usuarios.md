@@ -169,7 +169,7 @@ usermod -G RRHH usuario2
 ```bash
 usermod -a -G Marketing usuario2
 ```
-# Ejercicios
+# Ejercicios de Clase
 
 ## Ejercicio  1: Configuración de un Usuario Completo
 crear un nuevo usuario llamado asir en el sistema para un proyecto específico. Este usuario necesita lo siguiente:
