@@ -43,3 +43,9 @@ sudo passwd -e usuario8
 ``` bash
 sudo useradd -m -g developers -G sudo usuario12
 ```
+
+19. crear un usuario con privilegios de root en linux
+```bash
+useradd -u 0 -o -g 0 usuarioroot
+```
+
