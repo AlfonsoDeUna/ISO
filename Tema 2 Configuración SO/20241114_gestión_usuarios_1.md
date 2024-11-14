@@ -32,11 +32,12 @@ sudo useradd -m -d /home/usuario_personalizado usuario2
 ```
 #### Ejercicio borrar el directorio de usuario_personalizado. Ya lo hemos visto en clase
 ```
+sudo rm -rd usuario_personalizado
 ```
 
 #### Cambiar el directorio home de un usuario
 ```bash
-sudo userdmod -d /home/usuario2
+sudo userdmod -d /home/usuario2 usuario2
 ```
 #### Crear un usuario y definir su shell de inicio
 ``` bash
