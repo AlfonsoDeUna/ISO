@@ -1,6 +1,6 @@
 # Creación de usuarios
 
-1. Crear un usuario básico
+#### Crear un usuario básico
 ``` bash
 sudo useradd usuario1
 ```
@@ -48,4 +48,11 @@ sudo useradd -m -g developers -G sudo usuario12
 ```bash
 useradd -u 0 -o -g 0 usuarioroot
 ```
+## BORRRAR USUARIOS
 
+
+Borrar usuario1 y su directorio home
+```bash
+
+sudo userdel -r usuario1
+```
