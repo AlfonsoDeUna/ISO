@@ -3,15 +3,24 @@
 
 ## Comandos de `chmod` y `chown` con ejemplos
 
+#### REPASO: lista el contenido del directorio home 
+```bash
+ls -l
+```
+Observar la información detallada del fichero al principio obervarás la máscara de permisos verás cosas como:
+* rwx-r-x---
+* rwxrwxrwx
+* r--r----- 
+
 ## Cambiar permisos con `chmod`
 
-#### 1. Otorgar permisos de lectura, escritura y ejecución al propietario del archivo
+#### Dar permisos de lectura, escritura y ejecución al propietario del archivo
 ```bash
 chmod u+rwx archivo.txt
 ```
-Este comando añade permisos de lectura, escritura y ejecución (`rwx`) al propietario del archivo `archivo.txt`.
+* lectura = r, escritura = w y ejecución x (`rwx`)
 
-#### 2. Quitar permisos de escritura para el grupo y otros usuarios
+#### Quitar permisos de escritura para el grupo y otros usuarios
 ```bash
 chmod go-w archivo.txt
 ```
