@@ -169,3 +169,27 @@ usermod -G RRHH usuario2
 ```bash
 usermod -a -G Marketing usuario2
 ```
+# Ejercicios
+
+## Ejercicio  1: Configuración de un Usuario Completo
+crear un nuevo usuario llamado asir en el sistema para un proyecto específico. Este usuario necesita lo siguiente:
+
+* Un directorio home personalizado en /home/asir1.
+*La shell /bin/bash como shell de inicio.
+*Un grupo primario propio y dos grupos secundarios, sudo y proxmox. (Si el grupo proxmox no existe, créalo).
+* Un comentario que indique: "Usuario del proyecto asir".
+* Una contraseña asignada inmediatamente después de crear el usuario.
+* Configuración para forzar el cambio de contraseña en su primer inicio de sesión.
+* Una fecha de expiración para el usuario, fijada en 2024-12-31.
+Instrucciones: Ejecuta los comandos necesarios en el orden correcto para cumplir con cada uno de los requisitos y captura los resultados de cada paso en un documento.
+
+## Ejercicio 2: Auditoría y Modificación de Usuarios Existentes
+Realiza una auditoría de los usuarios en el sistema y luego realiza algunas configuraciones específicas:
+
+* Verifica qué usuarios están actualmente conectados con el comando w.
+* Entra en el sistema con los usuarios asir y usuario6 (si no los tienes créalos con la contraseña 1859 realiza varios logins y cierra sesión)
+* Usa lastlog para ver la última vez que se conectaron los usuarios usuario_nuevo y usuario6.
+* Cambia el directorio home de asir a /home/asir_iso.
+* Agrega a usuario6 en el grupo Marketing sin eliminar los grupos secundarios actuales.
+* Modifica el perfil de usuario6 para que expiren su contraseña y su acceso el 2024-12-31.
+* 
