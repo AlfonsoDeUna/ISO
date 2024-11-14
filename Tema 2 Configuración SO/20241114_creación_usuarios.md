@@ -3,7 +3,8 @@
 Utilizamos el comando: useradd
 si utilizas adduser es un script de perl que puedes añadir más información del usuario en la creación pero no es un comando
 
-** Fichero información de usuarios:** /etc/passwd
+## /etc/passwd
+Fichero con información de los usuarios
 
 | Atributo         | Definición                                                                                                                                                                                                                                                                               |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
