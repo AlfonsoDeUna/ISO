@@ -93,9 +93,6 @@ lastlog -u usuario
 # /etc/passwd
 Fichero con información de los usuarios
 
-#### 
-lastlog -u usuario
-
 ```bash
 cat /etc/passwd
 ```
