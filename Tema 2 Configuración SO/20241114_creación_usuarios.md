@@ -1,4 +1,4 @@
-# Creación de usuarios
+# Gestión de usuarios en Linux (grupos, permisos, perfiles)
 
 * Utilizamos el comando: **useradd**
 * Puedes utilizas `adduser` es un script de perl que puedes añadir más información del usuario en la creación pero no es un comando
