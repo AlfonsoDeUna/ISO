@@ -101,7 +101,7 @@ cat /etc/passwd | grep usuario1
 
 #### Ver todos los usuarios que comienzan por usu
 ```bash
-cat /etc/passwd | grep usu*
+sudo grep ^usu /etc/passwd 
 ```
 
 ## BORRRAR USUARIOS
