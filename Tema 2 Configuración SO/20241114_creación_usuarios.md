@@ -19,8 +19,12 @@ id usuario1
 
 ### Ver todas las opciones del comando useradd
 ```
-sudo grep ^usu /etc/passwd
+useradd -help
 ```
+### Descubrir si otros usuarios están conecctados a mi máquina
+```bash
+w
+``` 
 
 #### Crear un usuario y especificar su directorio home
  ``` bash
@@ -81,10 +85,16 @@ passwd usuarioroot
 ```
 *Realiza un su de usuarioroot para que ver que es root*
 
+#### Mostrar el último acceso de un usuario 
+```bash
+lastlog -u usuario
+```
+
 # /etc/passwd
 Fichero con información de los usuarios
 
-#### Visualiza el fichero
+#### 
+lastlog -u usuario
 
 ```bash
 cat /etc/passwd
