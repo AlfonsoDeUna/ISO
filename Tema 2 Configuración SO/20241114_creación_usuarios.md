@@ -35,6 +35,10 @@ sudo useradd -m -g grupo1 usuario5
 ```bash
 sudo useradd -m -G sudo,docker usuario6
 ```
+#### Modificar los grupos secundarios sin borrar los que tenemos
+```
+usermod -a -G Marketing usuario6
+```
 #### Crear un usuario con una fecha de expiración
 ``` bash
 sudo useradd -m -e 2024-12-31 usuario7
