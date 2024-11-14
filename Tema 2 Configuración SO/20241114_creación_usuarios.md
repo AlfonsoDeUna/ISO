@@ -6,6 +6,12 @@ si utilizas adduser es un script de perl que puedes añadir más información de
 ## /etc/passwd
 Fichero con información de los usuarios
 
+#### Visualiza el fichero
+
+```bash
+cat /etc/passwd
+```
+
 | Atributo         | Definición                                                                                                                                                                                                                                                                               |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nombre**       | Especifica el nombre de inicio de sesión del usuario. Hay una serie de restricciones en la denominación de usuarios. Consulte el mandato mkuser para obtener más información.                                                                     |
