@@ -32,12 +32,11 @@ sudo useradd -m -c "comentario" usuario8
 ``` bash
 sudo useradd -usuario8
 sudo passwd usuario8
-sudo passwd -e usuario8
+
 ```
 15. Crear un usuario y forzar cambio de contraseña en el primer inicio
 ``` bash
-sudo useradd usuario9
-sudo passwd -e usuario9
+sudo passwd -e usuario8
 ```
 
 18. Crear un usuario con un grupo secundario y un grupo principal personalizado
