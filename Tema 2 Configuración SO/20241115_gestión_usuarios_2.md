@@ -26,7 +26,7 @@ chmod go-w archivo.txt
 ```
 Este comando elimina los permisos de escritura (`-w`) para el grupo y otros usuarios en el archivo `archivo.txt`.
 
-### 3. Establecer permisos específicos con valores numéricos
+### Establecer permisos específicos con valores numéricos
 ```bash
 chmod 754 archivo.txt
 ```
@@ -37,23 +37,20 @@ Este comando establece permisos específicos en formato numérico:
 
 ## Cambiar propietario y grupo con `chown`
 
-### 4. Cambiar el propietario del archivo
+### Cambiar el propietario del archivo
 ```bash
 chown usuario archivo.txt
 ```
-Este comando cambia el propietario del archivo `archivo.txt` a `usuario`.
 
-### 5. Cambiar el grupo del archivo
+### Cambiar el grupo del archivo
 ```bash
 chown :grupo archivo.txt
 ```
-Este comando cambia el grupo asociado al archivo `archivo.txt` a `grupo`.
 
-### 6. Cambiar el propietario y grupo del archivo simultáneamente
+### Cambiar el propietario y grupo del archivo simultáneamente
 ```bash
 chown usuario:grupo archivo.txt
 ```
-Este comando cambia tanto el propietario como el grupo del archivo `archivo.txt` a `usuario` y `grupo`, respectivamente.
 
 ## Cambiar permisos de directorios y archivos recursivamente
 
@@ -73,7 +70,7 @@ Este comando cambia el propietario y el grupo de todos los archivos y directorio
 
 ## Cambiar permisos de solo archivos o solo directorios
 
-### 9. Cambiar permisos de solo archivos dentro de un directorio
+###  Cambiar permisos de solo archivos dentro de un directorio
 ```bash
 find /ruta/directorio -type f -exec chmod 644 {} \;
 ```
@@ -81,7 +78,7 @@ Este comando cambia los permisos de solo archivos (`-type f`) dentro de `/ruta/d
 - `6` (propietario): lectura y escritura (`rw-`)
 - `4` (grupo y otros): solo lectura (`r--`)
 
-### 10. Cambiar permisos de solo directorios dentro de un directorio
+### Cambiar permisos de solo directorios dentro de un directorio
 ```bash
 find /ruta/directorio -type d -exec chmod 755 {} \;
 ```
