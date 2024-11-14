@@ -12,6 +12,11 @@ sudo useradd usuario1
 sudo adduser ejemplo
 ```
 
+#### Ver información de un usuario 
+```bash
+id usuario1
+```
+
 ### Ver todas las opciones del comando useradd
 ```
 sudo grep ^usu /etc/passwd
