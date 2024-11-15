@@ -67,16 +67,16 @@ sudo useradd -m -e 2024-12-31 usuario7
 ```
 #### Crear un usuario y asignar un comentario
 ``` bash
-sudo useradd -m -c "comentario" usuario8
+sudo useradd -m -c "comentario" usuario9
 ```
 #### Crear un usuario con contraseña al instante
 ``` bash
-sudo useradd -usuario8
-sudo passwd usuario8
+sudo useradd -usuario10
+sudo passwd usuario10
 ```
 #### Crear un usuario y forzar cambio de contraseña en el primer inicio
 ``` bash
-sudo passwd -e usuario8
+sudo passwd -e usuario10
 ```
 
 #### crear un usuario con privilegios de root en linux
