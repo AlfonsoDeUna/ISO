@@ -71,7 +71,7 @@ sudo useradd -m -c "comentario" usuario9
 ```
 #### Crear un usuario con contraseña al instante
 ``` bash
-sudo useradd -usuario10
+sudo useradd usuario10
 sudo passwd usuario10
 ```
 #### Crear un usuario y forzar cambio de contraseña en el primer inicio
