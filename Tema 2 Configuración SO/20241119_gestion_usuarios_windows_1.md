@@ -3,7 +3,9 @@
 ## Entrar en powershell en modo administrador en ISE
 
 #### Crear una carpeta llamada "MiCarpeta"
+```powershell
 New-Item -Path "C:\MiCarpeta" -ItemType Directory
+```
 
 #### Crear un archivo vacío llamado "MiArchivo.txt"
 New-Item -Path "C:\MiCarpeta\MiArchivo.txt" -ItemType File
