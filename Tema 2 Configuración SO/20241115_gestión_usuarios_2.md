@@ -62,7 +62,7 @@ chown usuario:grupo archivo.txt
 
 ## Cambiar permisos de directorios y archivos recursivamente
 
-### 7. Cambiar permisos de todos los archivos y directorios de forma recursiva
+### Cambiar permisos de todos los archivos y directorios de forma recursiva
 ```bash
 chmod -R 755 /ruta/directorio
 ```
@@ -70,7 +70,7 @@ Este comando aplica los permisos `755` a todos los archivos y directorios dentro
 - `7` (propietario): lectura, escritura y ejecución (`rwx`)
 - `5` (grupo y otros): lectura y ejecución (`r-x`)
 
-### 8. Cambiar propietario y grupo de todos los archivos y directorios recursivamente
+### Cambiar propietario y grupo de todos los archivos y directorios recursivamente
 ```bash
 chown -R usuario:grupo /ruta/directorio
 ```
