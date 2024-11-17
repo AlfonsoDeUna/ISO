@@ -30,6 +30,14 @@ Este comando elimina los permisos de escritura (`-w`) para el grupo y otros usua
 ```bash
 chmod 754 archivo.txt
 ```
+---
+### VALORES NUMÉRICOS 
+* 4: lectura
+* 2: escritura
+* 1: ejecución
+---
+
+#### EJEMPLOS  
 Este comando establece permisos específicos en formato numérico:
 - `7` (propietario): lectura, escritura y ejecución (`rwx`)
 - `5` (grupo): lectura y ejecución (`r-x`)
