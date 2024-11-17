@@ -14,6 +14,9 @@ Observar la información detallada del fichero al principio obervarás la másca
 
 ## Cambiar permisos con `chmod`
 
+Para poder ejecutar estos comandos se realiza con un archivo.txt que tienes que crearlo primero.
+Ya hemos visto anteriormente cómo se realiza. Puedes crearlo de muchas maneras.
+
 #### Dar permisos de lectura, escritura y ejecución al propietario del archivo
 ```bash
 chmod u+rwx archivo.txt
