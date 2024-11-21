@@ -19,8 +19,8 @@ if (-not (Test-Path -Path $carpetaBase)) {
 
 # Lista de usuarios a crear (definida directamente en el script) - esto es una variable en forma de tabla que guarda la información del usuario.
 $usuarios = @(
-    @{ Nombre = "Juan"; Apellido = "López"; NombreUsuario = "mlopez"; Grupo = "Administradores" },
-    @{ Nombre = "Ignacio"; Apellido = "Pérez"; NombreUsuario = "jperez"; Grupo = "Remote Desktop Users" },
+    @{ Nombre = "Juan"; Apellido = "López"; NombreUsuario = "jlopez"; Grupo = "Administradores" },
+    @{ Nombre = "Ignacio"; Apellido = "Pérez"; NombreUsuario = "iperez"; Grupo = "Remote Desktop Users" },
     @{ Nombre = "Antonio"; Apellido = "Torres"; NombreUsuario = "atorres"; Grupo = "Usuarios" }
 )
 
