@@ -60,9 +60,9 @@ Get-LocalUser
 ```powershell
 Set-LocalUser -Name asir1 -Description "Usuario Nuevo ASIR"
 ```
-#### Modificar la contraseña del usuario para que se cambie al iniciar la sesión
+#### Que el usuario no pueda modificar la contraseña
 ```powershell
-Set-LocalUser -Name "asir1" -PasswordChangeOnNextLogon $true
+Set-LocalUser -Name "asir1" -UserMayChangePassword $true
 ```
 #### Bloquear una cuenta de usuario para impedir el acceso
 ```powershell
