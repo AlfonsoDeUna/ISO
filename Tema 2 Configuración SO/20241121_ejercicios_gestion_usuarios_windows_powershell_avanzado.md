@@ -5,6 +5,9 @@ en la clase anterior
 
 Cuando acabes guarda este script como creacionusuario.ps1
 
+PRIMERO HE PUESTO INFORMACIÓN PARA ENTENDER CIERTAS PARTES DEL SCRIPT VE LANZANDO Y OBSERVANDO LO QUE HACE PARA ENTENDER EL CÓDIGO
+UNA VEZ ENTENDIDO ESTAS PARTE COMIENZA EL EJERCICIO , AL FINAL ESTÁ EL SCRIPT QUE TENDRÁS QUE IR REEMPLAZANDO LAS LÍNEAS DE CREACIÓN DE DIRECTORIO, USUARIOS Y GRUPOS
+
 ## Condicionales
 
 El comando `if` en PowerShell funciona como una estructura de control que evalúa una condición. Si la condición es verdadera (`$true`), se ejecuta el bloque de código correspondiente. Si es falsa (`$false`), se pasa al bloque `else` (si existe) o no se ejecuta nada.
