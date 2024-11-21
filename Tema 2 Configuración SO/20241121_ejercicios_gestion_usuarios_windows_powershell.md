@@ -1,6 +1,6 @@
 # Ejercicio de creación de usuarios en porwershell
 
-Crea el siguiente script en powershell debes completar con los comandos vistos en clase donde pone la marca ### --> debes sustituirlo por los cmdlet vistos
+Crea el siguiente script en powershell y completa con los comandos vistos en clase donde pone la marca ### --> debes sustituirlo por los cmdlet vistos
 en la clase anterior
 
 Cuando acabes guarda este script como creacionusuario.ps1
@@ -11,7 +11,7 @@ $carpetaBase = "C:\UsuariosEmpresa"
 
 # Crear la carpeta principal si no existe
 if (-not (Test-Path -Path $carpetaBase)) {
-    ### añade aquí el cmdlet para crear una carpeta, el nombre de la carpeta lo coge de la variable creada $carpetaBase
+    ### ---> añade aquí el cmdlet para crear una carpeta, el nombre de la carpeta lo coge de la variable creada $carpetaBase
     Write-Host "Carpeta principal creada: $carpetaBase"
 } else {
     Write-Host "La carpeta principal ya existe: $carpetaBase"
@@ -36,14 +36,14 @@ foreach ($usuario in $usuarios) {
 
     try {
         # Crear el usuario
-        ### añadir aquí el cmdlet para crear un usuario cuyo usuario está almacenado en $nombreUsuario la password en $password,
+        ### ---> añadir aquí el cmdlet para crear un usuario cuyo usuario está almacenado en $nombreUsuario la password en $password,
         # para el nombre completo la opción -FullName utiliza $(usuario.Nombre) $(usuario.Apellido)
         # utiliza la opción -PasswordChangeOnNextLogon $true
         
         Write-Host "Usuario creado: $nombreUsuario"
 
         # Asignar el usuario al grupo
-        ### Añadir el usuario al grupo con el cmdlet para añadir usuarios a los grupos indicados el usuario está almacenado en $nombreusuario y el grupo está almacenado en $grupo
+        ### --->Añadir el usuario al grupo con el cmdlet para añadir usuarios a los grupos indicados el usuario está almacenado en $nombreusuario y el grupo está almacenado en $grupo
         Write-Host "Usuario $nombreUsuario añadido al grupo $grupo"
     } catch {
         Write-Host "Error al crear o asignar el usuario $nombreUsuario: $_"
