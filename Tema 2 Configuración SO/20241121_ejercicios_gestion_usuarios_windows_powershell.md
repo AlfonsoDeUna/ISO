@@ -27,7 +27,8 @@ $usuarios = @(
 # Contraseña predeterminada para los usuarios
 ## crea una variable $password donde almacene la contraseña y con el cmdlet ConvertTo-SecureString crea la contraseña en la misma línea
 
-# Crear usuarios y asignarles grupos
+# Crear usuarios y asignarles grupos el foreach recorre la tabla creada en la variable $usuarios y va línea a linea obteniendo los valores que hemos añadido
+# a cada usuario.
 foreach ($usuario in $usuarios) {
     # PAra cada usuario guardamos el nombre y el grupo   
     $nombreUsuario = $usuario.NombreUsuario
