@@ -70,11 +70,11 @@ Crea los siguientes usuarios con los datos indicados. Luego, añádeles al grupo
 | atorres           | Antonio Torres          | Personal general             | Usuarios             | P@ssw0rd2024 |
 
 **Pasos esperados:**
-1. Crear a María López:
+1. Crear a Antonio López:
    ```powershell
 
    ```
-2. Crear a Ana Torres:
+2. Crear a Antonio Torres:
    ```powershell
  
    ```
@@ -83,7 +83,7 @@ Crea los siguientes usuarios con los datos indicados. Luego, añádeles al grupo
 
 ### **Ejercicio 6: Eliminar un usuario**
 **Enunciado:**  
-El usuario `jmartinez` ya no pertenece a la empresa. Elimínalo del sistema.
+El usuario `atorres` ya no pertenece a la empresa. Elimínalo del sistema.
 
 **Pasos esperados:**
 1. Eliminar al usuario:
