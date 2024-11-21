@@ -1,6 +1,7 @@
 # Ejercicio de creación de usuarios en porwershell
 
-Crea el siguiente script en powershell debes completar con los comandos vistos en clase donde pone la marca ### con las instrucciones
+Crea el siguiente script en powershell debes completar con los comandos vistos en clase donde pone la marca ### --> debes sustituirlo por los cmdlet vistos
+en la clase anterior
 
 Cuando acabes guarda este script como creacionusuario.ps1
 
