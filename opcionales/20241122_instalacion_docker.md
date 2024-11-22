@@ -62,8 +62,3 @@ sudo systemctl status docker
 Systemctl es un comando muy importante que lo utilizaremos mucho porque maneja los servicios del sistema, podemos iniciar, parar, reiniciar, ver el estado como en este caso. Del servicio de Docker
 
 
-
-### **Notas:**
-- Este script incluye el parámetro `-y` para que acepte automáticamente las confirmaciones durante la instalación.
-- Si tienes problemas con algún paso, asegúrate de que tu sistema esté actualizado con `sudo apt update && sudo apt upgrade`.
-
