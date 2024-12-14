@@ -78,7 +78,8 @@ Remove-LocalUser asir1
 ```
 #### Mostrar usuarios y sus grupos
 ```powershell
-Get-LocalUser | ForEach-Object { $_.Name; Get-LocalGroup -Member $_.Name }
+Get-LocalGroup
+Get-LocalGroupMember -group nombre_grupo
 ```
 #### Añadir usuario al grupo Usuarios
 ```powershell
