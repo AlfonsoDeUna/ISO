@@ -201,4 +201,49 @@ foreach ($usuario in $usuarios) {
 }
 ```
 
+# SOLUCIÓN DEL SCRIPT
+
+```powershell
+
+# Configuración inicial: Crear carpeta principal
+$carpetaBase = "C:\UsuariosEmpresa"
+
+# Crear la carpeta principal si no existe
+if (-not (Test-Path -Path $carpetaBase)) {
+    New-Item -Path $carpetaBase -ItemType Directory
+    Write-Host "Carpeta principal creada: $carpetaBase"
+} else {
+    Write-Host "La carpeta principal ya existe: $carpetaBase"
+}
+
+# Lista de usuarios a crear (definida directamente en el script) - esto es una variable en forma de tabla que guarda la información del usuario.
+$usuarios = @(
+    @{ Nombre = "Juan"; Apellido = "López"; NombreUsuario = "jlopez"; Grupo = "Administradores" },
+    @{ Nombre = "Ignacio"; Apellido = "Pérez"; NombreUsuario = "iperez"; Grupo = "Remote Desktop Users" },
+    @{ Nombre = "Antonio"; Apellido = "Torres"; NombreUsuario = "atorres"; Grupo = "Usuarios" }
+)
+
+# Contraseña predeterminada para los usuarios
+$password = ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force
+
+# Crear usuarios y asignarles grupos - el foreach recorre la tabla creada en la variable $usuarios y va línea a línea obteniendo los valores que hemos añadido
+# a cada usuario.
+foreach ($usuario in $usuarios) {
+    # Para cada usuario guardamos el nombre y el grupo
+    $nombreUsuario = $usuario.NombreUsuario
+    $grupo = $usuario.Grupo
+
+    try {
+        # Crear el usuario
+        New-LocalUser -Name $nombreUsuario -FullName "$($usuario.Nombre) $($usuario.Apellido)" -Password $password -PasswordChangeOnNextLogon $true
+        Write-Host "Usuario creado: $nombreUsuario"
+
+        # Asignar el usuario al grupo
+        Add-LocalGroupMember -Group $grupo -Member $nombreUsuario
+        Write-Host "Usuario $nombreUsuario añadido al grupo $grupo"
+    } catch {
+        Write-Host "Error al crear o asignar el usuario $nombreUsuario: $_"
+    }
+}
+```
 
