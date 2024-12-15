@@ -58,19 +58,19 @@ Get-LocalUser
 ```
 #### Modificar usuario
 ```powershell
-Set-LocalUser -Name asir1 -Description "Usuario Nuevo ASIR"
+Set-LocalUser -Name "UsuarioEjemplo" -Description "Usuario Nuevo ASIR"
 ```
 #### Que el usuario no pueda modificar la contraseña
 ```powershell
-Set-LocalUser -Name "asir1" -UserMayChangePassword $true
+Set-LocalUser -Name "UsuarioEjemplo" -UserMayChangePassword $true
 ```
 #### Bloquear una cuenta de usuario para impedir el acceso
 ```powershell
-Disable-LocalUser -Name "asir1"
+Disable-LocalUser -Name "UsuarioEjemplo"
 ```
 #### Habilitar una cuenta de usuario previamente desactivada
 ```powershell
-Enable-LocalUser -Name "asir1"
+Enable-LocalUser -Name "UsuarioEjemplo"
 ```
 #### Eliminar usuario
 ```powershell
@@ -83,13 +83,13 @@ Get-LocalGroupMember -group nombre_grupo
 ```
 #### Añadir usuario al grupo Usuarios
 ```powershell
-Add-LocalGroupMember -Group "Usuarios" -Member "NombreUsuario"
+Add-LocalGroupMember -Group "Usuarios" -Member "UsuarioEjemplo"
 ```
 #### Añadir usuario al grupo Administradores
 ```powershell
-Add-LocalGroupMember -Group "Administradores" -Member "NombreUsuario"
+Add-LocalGroupMember -Group "Administradores" -Member "UsuarioEjemplo"
 ```
 #### Añadir usuario al grupo usuarios remotos
 ```powershell
-Add-LocalGroupMember -Group "Remote Desktop Users" -Member "NombreUsuario"
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "UsuarioEjemplo"
 ```
