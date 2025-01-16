@@ -1,4 +1,4 @@
-El **bucle `for` en Bash** es una estructura de control que permite iterar sobre una lista de elementos o un rango de números. Su sintaxis es simple y versátil, lo que facilita automatizar tareas repetitivas.
+El **bucle `for` en Bash** es una estructura de control que permite iterar sobre una lista de elementos o un rango de números. Su función es automatizar tareas repetitivas.
 
 ### Sintaxis básica:
 
