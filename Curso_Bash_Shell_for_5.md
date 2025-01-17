@@ -24,10 +24,11 @@
 - **Ejercicio 1:**
   Escribe un script que imprima todos los archivos de un directorio con extensión `.txt`.
   ```bash
-for i in *.txt; do
-    echo $i 
-done
-```
+    for i in *.txt; do
+      echo $i 
+    done
+  ```
+
 #### **2.2 Iteración sobre un rango**
 - **Explicación:**
   Puedes usar la expresión `{inicio..fin..incremento}` para generar rangos.
