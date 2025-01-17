@@ -1,204 +1,229 @@
-El **bucle `for` en Bash** es una estructura de control que permite iterar sobre una lista de elementos o un rango de números. Su función es automatizar tareas repetitivas.
+# Bucles y Condicionales en Bash Shell
 
-### Sintaxis básica:
+### **1. Introducción**
 
-```bash
-for variable in lista
-do
-    # Instrucciones a ejecutar
+- **¿Qué es un bucle?**
+  Es una estructura que permite repetir un conjunto de comandos varias veces, hasta que se cumpla una condición.
+  
+- **¿Qué es un condicional?**
+  Es una estructura que ejecuta comandos solo si se cumple una condición específica.
+
+
+### **2. El Bucle `for`**
+#### **2.1 Iteración sobre una lista de elementos**
+- **Explicación:**
+  El bucle `for` recorre una lista de elementos y ejecuta comandos para cada uno.
+
+- **Ejemplo básico:**
+  ```bash
+  for i in $(ls); do
+      echo $i
+  done
+  ```
+
+- **Ejercicio 1:**
+  Escribe un script que imprima todos los archivos de un directorio con extensión `.txt`.
+  ```bash
+for i in *.txt; do
+    echo $i 
 done
 ```
+#### **2.2 Iteración sobre un rango**
+- **Explicación:**
+  Puedes usar la expresión `{inicio..fin..incremento}` para generar rangos.
 
-#### Iterar sobre una lista de palabras
-```bash
-for palabra in manzana naranja plátano
-do
-    echo "Fruta: $palabra"
-done
-```
-**Salida:**
-```
-Fruta: manzana
-Fruta: naranja
-Fruta: plátano
-```
+- **Ejemplo:**
+  ```bash
+  for i in {1..10}; do
+      echo "Número: $i"
+  done
+  ```
 
-#### Iterar sobre un rango de números
+- **Ejercicio 2:**
+  Crea un script que imprima los números pares entre 1 y 20.
 
-Otra forma de iterar es decirle desde donde empieza hasta donde acaba y
-- **Rangos**: `{inicio..fin..paso}` solo funcionan en versiones modernas de Bash.
+#### **2.3 Bucle tipo C**
+- **Explicación:**
+  Similar al bucle `for` en C o Java.
 
+- **Ejemplo:**
+  ```bash
+  for ((i = 0; i < 5; i++)); do
+      echo "Iteración: $i"
+  done
+  ```
 
-```bash
-for numero in {1..5}
-do
-    echo "Número: $numero"
-done
-```
-**Salida:**
-```
-Número: 1
-Número: 2
-Número: 3
-Número: 4
-Número: 5
-```
-
-#### Iterar con pasos específicos
-```bash
-for numero in {1..10..2}
-do
-    echo "Número impar: $numero"
-done
-```
-**Salida:**
-```
-Número impar: 1
-Número impar: 3
-Número impar: 5
-Número impar: 7
-Número impar: 9
-```
-
-#### Iterar sobre archivos en un directorio
-```bash
-for archivo in *.txt
-do
-    echo "Procesando $archivo"
-done
-```
-**Salida:**
-```
-Procesando archivo1.txt
-Procesando archivo2.txt
-Procesando archivo3.txt
-```
-
-#### Usar el bucle `for` con comandos
-```bash
-for usuario in $(cat usuarios.txt)
-do
-    echo "Creando usuario: $usuario"
-    sudo useradd $usuario
-done
-```
-
-#### Bucle infinito
-```bash
-for (( ; ; ))
-do
-    echo "Presiona Ctrl+C para detener este bucle"
-    sleep 1
-done
-```
-Aquí tienes varios ejemplos prácticos de cómo usar el bucle `for` en **Bash** para trabajar con ficheros:
+- **Ejercicio 3:**
+  Escribe un script que imprima "Hola" 10 veces utilizando un bucle tipo C.
 
 ---
 
-###  **Iterar sobre todos los archivos en un directorio**
-```bash
-for archivo in *
-do
-    echo "Archivo encontrado: $archivo"
-done
-```
-**Explicación:**  
-Esto imprimirá el nombre de todos los archivos y carpetas en el directorio actual.
+### **3. El Bucle `while`**
+#### **3.1 Introducción al `while`**
+- **Explicación:**
+  El bucle `while` ejecuta comandos mientras una condición sea verdadera.
 
-###  **Procesar solo archivos de texto (`*.txt`)**
-```bash
-for archivo in *.txt
-do
-    echo "Procesando archivo de texto: $archivo"
-    # Por ejemplo, contar las líneas del archivo
-    lineas=$(wc -l < "$archivo")
-    echo "El archivo $archivo tiene $lineas líneas"
-done
-```
-**Explicación:**  
-Se seleccionan únicamente archivos con extensión `.txt` y se cuentan sus líneas.
+- **Ejemplo básico:**
+  ```bash
+  number=5
+  while [ $number -gt 0 ]; do
+      echo "Número: $number"
+      number=$(($number - 1))
+  done
+  ```
+---
+- **Ejercicio 4:**
+  Escribe un script que imprima los números del 10 al 1 en orden descendente.
+---
+
+#### **3.2 Bucle infinito**
+- **Explicación:**
+  Un bucle infinito se utiliza para tareas continuas como monitorear procesos.
+
+- **Ejemplo:**
+  ```bash
+  while true; do
+      echo "Trabajando..."
+      sleep 1
+  done
+  ```
+---
+- **Ejercicio 5:**
+  Escribe un script que imprima la fecha actual cada segundo. Deténlo con `Ctrl+C`.
+  utiliza el comando date. recuerda para ejecutar $(date) dentro de un echo
+  para esperar 1 sg podemos hacer una pausa de 1 sg mediante sleep 1
 
 ---
 
-### **Cambiar la extensión de múltiples archivos**
-```bash
-for archivo in *.txt
-do
-    nuevo_nombre="${archivo%.txt}.bak"
-    mv "$archivo" "$nuevo_nombre"
-    echo "Renombrado: $archivo -> $nuevo_nombre"
-done
-```
-**Explicación:**  
-Este script renombra todos los archivos `.txt` a `.bak`.
+### **4. Combinación de Bucles y Condicionales**
+#### **4.1 Uso de `if` dentro de un `for`**
+- **Explicación:**
+  Puedes combinar bucles con condicionales para realizar verificaciones en cada iteración.
+
+- **Ejemplo:**
+  ```bash
+  for file in *; do
+      if [[ -d $file ]]; then
+          echo "$file es un directorio"
+      elif [[ -f $file ]]; then
+          echo "$file es un archivo"
+      fi
+  done
+  ```
+
+- **Ejercicio 6:**
+  Escribe un script que verifique si los elementos de un directorio son ejecutables.
+
+#### **4.2 Control de flujo con `break` y `continue`**
+- **`break`:** Sale del bucle inmediatamente.
+- **`continue`:** Salta a la siguiente iteración.
+
+- **Ejemplo con `break`:**
+  ```bash
+  for i in {1..10}; do
+      if [ $i -eq 5 ]; then
+          break
+      fi
+      echo "Número: $i"
+  done
+  ```
+
+- **Ejemplo con `continue`:**
+  ```bash
+  for i in {1..10}; do
+      if [ $i -eq 5 ]; then
+          continue
+      fi
+      echo "Número: $i"
+  done
+  ```
+
+- **Ejercicio 7:**
+  Crea un script que imprima números del 1 al 10, pero omita el número 5.
 
 ---
 
-### **Copiar archivos a otra carpeta**
-```bash
-for archivo in *.jpg
-do
-    cp "$archivo" /ruta/a/destino/
-    echo "Copiado $archivo a /ruta/a/destino/"
-done
-```
-**Explicación:**  
-Copia todos los archivos con extensión `.jpg` a un directorio específico.
+### **5. Leer Archivos con Bucles**
+#### **5.1 Usando `while read`**
+- **Explicación:**
+  Puedes leer un archivo línea por línea usando `while` y `read`.
+
+- **Ejemplo:**
+  ```bash
+  while read line; do
+      echo $line
+  done < file.txt
+  ```
+
+- **Ejercicio 8:**
+  Escribe un script que lea un archivo y cuente cuántas líneas tiene.
 
 ---
 
-### **Leer el contenido de varios archivos y procesarlo**
-```bash
-for archivo in *.log
-do
-    echo "Contenido del archivo $archivo:"
-    cat "$archivo"
-    echo "--------------------------------"
-done
-```
-**Explicación:**  
-Muestra el contenido de todos los archivos con extensión `.log`.
+### **6. Condicionales en Bash**
+#### **6.1 Sintaxis básica**
+- **Explicación:**
+  Los condicionales permiten ejecutar comandos según una condición.
+
+- **Ejemplo:**
+  ```bash
+  if [ -f archivo.txt ]; then
+      echo "El archivo existe"
+  else
+      echo "El archivo no existe"
+  fi
+  ```
+
+- **Ejercicio 9:**
+  Escribe un script que verifique si un directorio existe y lo cree si no existe.
+
+#### **6.2 Uso de operadores**
+- **Explicación:**
+  Utiliza operadores para comparar números y cadenas.
+
+- **Ejemplo con cadenas:**
+  ```bash
+  if [ "hola" == "hola" ]; then
+      echo "Las cadenas son iguales"
+  fi
+  ```
+
+- **Ejemplo con números:**
+  ```bash
+  if [ 5 -gt 3 ]; then
+      echo "5 es mayor que 3"
+  fi
+  ```
+
+- **Ejercicio 10:**
+  Escribe un script que compare dos números ingresados por el usuario.
 
 ---
 
-### **Eliminar archivos grandes (mayores a 1MB)**
-```bash
-for archivo in *
-do
-    if [ $(stat -c%s "$archivo") -gt 1000000 ]; then
-        echo "Eliminando archivo grande: $archivo"
-        rm "$archivo"
-    fi
-done
-```
-**Explicación:**  
-Este script elimina archivos que ocupan más de 1 MB.
+### **7. Ejercicio Final: Creación de un Menú Interactivo**
+ Combina bucles y condicionales para crear un programa funcional.
 
+- **Ejemplo:**
+  ```bash
+  while true; do
+      echo "Menú:"
+      echo "1. Mostrar archivos"
+      echo "2. Mostrar fecha"
+      echo "3. Salir"
+      read opcion
+      
+      if [ $opcion -eq 1 ]; then
+          ls
+      elif [ $opcion -eq 2 ]; then
+          date
+      elif [ $opcion -eq 3 ]; then
+          echo "Saliendo..."
+          break
+      else
+          echo "Opción no válida"
+      fi
+  done
+  ```
 
-### **Añadir una cabecera a todos los archivos de texto**
-```bash
-for archivo in *.txt
-do
-    echo "Añadiendo cabecera a $archivo"
-    echo "Cabecera del archivo" | cat - "$archivo" > temp && mv temp "$archivo"
-done
-```
-**Explicación:**  
-Añade una línea al inicio de cada archivo `.txt`.
-
-
-### 8. **Mover archivos según su fecha de modificación**
-```bash
-for archivo in *
-do
-    if [ "$(date -r "$archivo" +%Y)" -lt 2023 ]; then
-        mv "$archivo" /ruta/a/archivos_antiguos/
-        echo "Movido $archivo a archivos_antiguos"
-    fi
-done
-```
-**Explicación:**  
-Mueve los archivos modificados antes del año 2023 a un directorio específico.
-
-
-
+- **Reto Final:**
+  Amplía el menú para incluir opciones como mostrar el contenido de un archivo o verificar si un archivo existe.
