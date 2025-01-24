@@ -1,0 +1,407 @@
+2024-04-29T19:52:35.601676+00:00 ubuntu2204 systemd-logind[869]: New seat seat0.
+2024-04-29T19:52:35.601687+00:00 ubuntu2204 systemd-logind[869]: Watching system buttons on /dev/input/event0 (Power Button)
+2024-04-29T19:52:35.601690+00:00 ubuntu2204 systemd-logind[869]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2024-04-29T19:52:35.601694+00:00 ubuntu2204 systemd-logind[869]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2024-04-29T19:52:35.666282+00:00 ubuntu2204 polkitd[851]: Loading rules from directory /etc/polkit-1/rules.d
+2024-04-29T19:52:35.672457+00:00 ubuntu2204 polkitd[851]: Loading rules from directory /usr/share/polkit-1/rules.d
+2024-04-29T19:52:35.747900+00:00 ubuntu2204 polkitd[851]: Finished loading, compiling and executing 15 rules
+2024-04-29T19:52:35.749965+00:00 ubuntu2204 polkitd[851]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2024-04-29T19:52:38.875726+00:00 ubuntu2204 useradd[1240]: new group: name=ubuntu, GID=1000
+2024-04-29T19:52:38.875839+00:00 ubuntu2204 useradd[1240]: new user: name=ubuntu, UID=1000, GID=1000, home=/home/ubuntu, shell=/bin/bash, from=none
+2024-04-29T19:52:38.881183+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'adm'
+2024-04-29T19:52:38.881242+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'cdrom'
+2024-04-29T19:52:38.881265+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'sudo'
+2024-04-29T19:52:38.881288+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'dip'
+2024-04-29T19:52:38.881356+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'plugdev'
+2024-04-29T19:52:38.881380+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'users'
+2024-04-29T19:52:38.881405+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to group 'lpadmin'
+2024-04-29T19:52:38.881427+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'adm'
+2024-04-29T19:52:38.881449+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'cdrom'
+2024-04-29T19:52:38.881470+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'sudo'
+2024-04-29T19:52:38.881495+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'dip'
+2024-04-29T19:52:38.881522+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'plugdev'
+2024-04-29T19:52:38.881583+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'users'
+2024-04-29T19:52:38.881607+00:00 ubuntu2204 useradd[1240]: add 'ubuntu' to shadow group 'lpadmin'
+2024-04-29T19:52:44.025037+00:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2024-04-29T19:52:44.066366+00:00 ubuntu2204 systemd-logind[869]: New session c1 of user gdm.
+2024-04-29T19:52:44.102418+00:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2024-04-29T19:52:47.470934+00:00 ubuntu2204 polkitd[851]: Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T19:53:45.480259+00:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2024-04-29T19:53:45.480378+00:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2024-04-29T19:53:45.492573+00:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T19:53:45.507878+00:00 ubuntu2204 systemd-logind[869]: New session 2 of user ubuntu.
+2024-04-29T19:53:45.554380+00:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T19:53:47.725666+00:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2024-04-29T19:53:48.418996+00:00 ubuntu2204 gnome-keyring-daemon[2285]: The Secret Service was already initialized
+2024-04-29T19:53:48.419881+00:00 ubuntu2204 gnome-keyring-daemon[2600]: discover_other_daemon: 1
+2024-04-29T19:53:48.437737+00:00 ubuntu2204 gnome-keyring-daemon[2285]: The PKCS#11 component was already initialized
+2024-04-29T19:53:48.438920+00:00 ubuntu2204 gnome-keyring-daemon[2609]: discover_other_daemon: 1
+2024-04-29T19:53:48.443357+00:00 ubuntu2204 gnome-keyring-daemon[2610]: discover_other_daemon: 1
+2024-04-29T19:53:50.694460+00:00 ubuntu2204 polkitd[851]: Registered Authentication Agent for unix-session:2 (system bus name :1.83 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T19:53:52.193195+00:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2024-04-29T19:53:52.226195+00:00 ubuntu2204 systemd-logind[869]: Session c1 logged out. Waiting for processes to exit.
+2024-04-29T19:53:52.264900+00:00 ubuntu2204 polkitd[851]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.39, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2024-04-29T19:53:52.277127+00:00 ubuntu2204 systemd-logind[869]: Removed session c1.
+2024-04-29T19:55:02.050928+00:00 ubuntu2204 CRON[3616]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2024-04-29T19:55:02.055144+00:00 ubuntu2204 CRON[3616]: pam_unix(cron:session): session closed for user root
+2024-04-29T20:05:01.357450+00:00 ubuntu2204 CRON[3663]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2024-04-29T20:05:01.360775+00:00 ubuntu2204 CRON[3663]: pam_unix(cron:session): session closed for user root
+2024-04-29T20:06:58.830270+00:00 ubuntu2204 gnome-keyring-daemon[2285]: couldn't initialize slot with master password: The password or PIN is incorrect
+2024-04-29T20:06:58.831160+00:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2024-04-29T20:07:03.538132+00:00 ubuntu2204 systemd-logind[869]: The system will power off now!
+2024-04-29T20:07:03.569241+00:00 ubuntu2204 systemd-logind[869]: System is powering down.
+2024-04-29T20:07:03.620977+00:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session closed for user ubuntu
+2024-04-29T16:19:27.500155-04:00 ubuntu2204 systemd-logind[823]: New seat seat0.
+2024-04-29T16:19:27.500158-04:00 ubuntu2204 systemd-logind[823]: Watching system buttons on /dev/input/event0 (Power Button)
+2024-04-29T16:19:27.500162-04:00 ubuntu2204 systemd-logind[823]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2024-04-29T16:19:27.500166-04:00 ubuntu2204 systemd-logind[823]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2024-04-29T16:19:27.527618-04:00 ubuntu2204 polkitd[807]: Loading rules from directory /etc/polkit-1/rules.d
+2024-04-29T16:19:27.528464-04:00 ubuntu2204 polkitd[807]: Loading rules from directory /usr/share/polkit-1/rules.d
+2024-04-29T16:19:27.557908-04:00 ubuntu2204 polkitd[807]: Finished loading, compiling and executing 15 rules
+2024-04-29T16:19:27.562930-04:00 ubuntu2204 polkitd[807]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2024-04-29T16:19:28.780774-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2024-04-29T16:19:28.818701-04:00 ubuntu2204 systemd-logind[823]: New session c1 of user gdm.
+2024-04-29T16:19:28.844039-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2024-04-29T16:19:31.237217-04:00 ubuntu2204 polkitd[807]: Registered Authentication Agent for unix-session:c1 (system bus name :1.38 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:19:38.345688-04:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2024-04-29T16:19:38.345821-04:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2024-04-29T16:19:38.360568-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:19:38.381177-04:00 ubuntu2204 systemd-logind[823]: New session 2 of user ubuntu.
+2024-04-29T16:19:38.417610-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:19:38.876529-04:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2024-04-29T16:19:39.340557-04:00 ubuntu2204 gnome-keyring-daemon[1589]: The Secret Service was already initialized
+2024-04-29T16:19:39.340961-04:00 ubuntu2204 gnome-keyring-daemon[1783]: discover_other_daemon: 1
+2024-04-29T16:19:39.349966-04:00 ubuntu2204 gnome-keyring-daemon[1589]: The PKCS#11 component was already initialized
+2024-04-29T16:19:39.350447-04:00 ubuntu2204 gnome-keyring-daemon[1786]: discover_other_daemon: 1
+2024-04-29T16:19:39.350659-04:00 ubuntu2204 gnome-keyring-daemon[1787]: discover_other_daemon: 1
+2024-04-29T16:19:41.153533-04:00 ubuntu2204 polkitd[807]: Registered Authentication Agent for unix-session:2 (system bus name :1.75 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:19:42.153920-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2024-04-29T16:19:42.188624-04:00 ubuntu2204 systemd-logind[823]: Session c1 logged out. Waiting for processes to exit.
+2024-04-29T16:19:42.217904-04:00 ubuntu2204 polkitd[807]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.38, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2024-04-29T16:19:42.234554-04:00 ubuntu2204 systemd-logind[823]: Removed session c1.
+2024-04-29T16:19:52.524255-04:00 ubuntu2204 (sd-pam): pam_unix(systemd-user:session): session closed for user gdm
+2024-04-29T16:20:01.176504-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt update
+2024-04-29T16:20:01.177026-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:20:03.759561-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:20:13.986928-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
+2024-04-29T16:20:13.987687-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:20:26.682538-04:00 ubuntu2204 useradd[3150]: new user: name=sshd, UID=122, GID=65534, home=/run/sshd, shell=/usr/sbin/nologin, from=none
+2024-04-29T16:20:30.586680-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:20:36.189867-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/visudo
+2024-04-29T16:20:36.190662-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:20:49.620224-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:20:56.675404-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/poweroff
+2024-04-29T16:20:56.676821-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:20:56.682528-04:00 ubuntu2204 systemd-logind[823]: The system will power off now!
+2024-04-29T16:20:56.693780-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:20:56.703689-04:00 ubuntu2204 systemd-logind[823]: System is powering down.
+2024-04-29T16:20:56.731115-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session closed for user ubuntu
+2024-04-29T16:23:40.139195-04:00 ubuntu2204 systemd-logind[841]: New seat seat0.
+2024-04-29T16:23:40.139261-04:00 ubuntu2204 systemd-logind[841]: Watching system buttons on /dev/input/event0 (Power Button)
+2024-04-29T16:23:40.139264-04:00 ubuntu2204 systemd-logind[841]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2024-04-29T16:23:40.139275-04:00 ubuntu2204 systemd-logind[841]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2024-04-29T16:23:40.139374-04:00 ubuntu2204 polkitd[827]: Loading rules from directory /etc/polkit-1/rules.d
+2024-04-29T16:23:40.139377-04:00 ubuntu2204 polkitd[827]: Loading rules from directory /usr/share/polkit-1/rules.d
+2024-04-29T16:23:40.139401-04:00 ubuntu2204 polkitd[827]: Finished loading, compiling and executing 15 rules
+2024-04-29T16:23:40.139408-04:00 ubuntu2204 polkitd[827]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2024-04-29T16:23:41.274703-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2024-04-29T16:23:41.308247-04:00 ubuntu2204 systemd-logind[841]: New session c1 of user gdm.
+2024-04-29T16:23:41.361925-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2024-04-29T16:23:43.807427-04:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-session:c1 (system bus name :1.38 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:23:45.910658-04:00 ubuntu2204 sshd[1561]: Server listening on :: port 22.
+2024-04-29T16:23:53.100827-04:00 ubuntu2204 sshd[1562]: Accepted password for ubuntu from 10.0.2.2 port 49994 ssh2
+2024-04-29T16:23:53.101518-04:00 ubuntu2204 sshd[1562]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:23:53.127447-04:00 ubuntu2204 systemd-logind[841]: New session 2 of user ubuntu.
+2024-04-29T16:23:53.152735-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:23:55.871633-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt install gcc make dkms linux-headers-6.8.0-31-generic -y
+2024-04-29T16:23:55.872318-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:24:38.402958-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:24:54.787553-04:00 ubuntu2204 sshd[2431]: Accepted password for ubuntu from 10.0.2.2 port 50035 ssh2
+2024-04-29T16:24:54.789625-04:00 ubuntu2204 sshd[2431]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:24:54.794028-04:00 ubuntu2204 systemd-logind[841]: New session 4 of user ubuntu.
+2024-04-29T16:25:02.712778-04:00 ubuntu2204 CRON[2474]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2024-04-29T16:25:02.717983-04:00 ubuntu2204 CRON[2474]: pam_unix(cron:session): session closed for user root
+2024-04-29T16:26:40.116986-04:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/reboot
+2024-04-29T16:26:40.117638-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:26:40.122783-04:00 ubuntu2204 systemd-logind[841]: The system will reboot now!
+2024-04-29T16:26:40.133879-04:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2024-04-29T16:26:40.145518-04:00 ubuntu2204 systemd-logind[841]: System is rebooting.
+2024-04-29T16:26:40.163303-04:00 ubuntu2204 sshd[1562]: pam_unix(sshd:session): session closed for user ubuntu
+2024-04-29T16:26:40.163781-04:00 ubuntu2204 sshd[2431]: pam_unix(sshd:session): session closed for user ubuntu
+2024-04-29T16:26:44.080763-04:00 ubuntu2204 systemd-logind[808]: New seat seat0.
+2024-04-29T16:26:44.080771-04:00 ubuntu2204 systemd-logind[808]: Watching system buttons on /dev/input/event0 (Power Button)
+2024-04-29T16:26:44.080774-04:00 ubuntu2204 systemd-logind[808]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2024-04-29T16:26:44.080833-04:00 ubuntu2204 systemd-logind[808]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2024-04-29T16:26:44.095929-04:00 ubuntu2204 polkitd[795]: Loading rules from directory /etc/polkit-1/rules.d
+2024-04-29T16:26:44.097125-04:00 ubuntu2204 polkitd[795]: Loading rules from directory /usr/share/polkit-1/rules.d
+2024-04-29T16:26:44.115601-04:00 ubuntu2204 polkitd[795]: Finished loading, compiling and executing 15 rules
+2024-04-29T16:26:44.116059-04:00 ubuntu2204 polkitd[795]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2024-04-29T16:26:45.282808-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2024-04-29T16:26:45.310463-04:00 ubuntu2204 systemd-logind[808]: New session c1 of user gdm.
+2024-04-29T16:26:45.353695-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2024-04-29T16:26:48.364110-04:00 ubuntu2204 sshd[1243]: Server listening on :: port 22.
+2024-04-29T16:26:48.669540-04:00 ubuntu2204 polkitd[795]: Registered Authentication Agent for unix-session:c1 (system bus name :1.38 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:26:48.789403-04:00 ubuntu2204 sshd[1249]: Accepted password for ubuntu from 10.0.2.2 port 50054 ssh2
+2024-04-29T16:26:48.793091-04:00 ubuntu2204 sshd[1249]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:26:48.815546-04:00 ubuntu2204 systemd-logind[808]: New session 2 of user ubuntu.
+2024-04-29T16:26:48.855150-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:26:56.331668-04:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2024-04-29T16:26:56.331789-04:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2024-04-29T16:26:56.348602-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:26:56.353026-04:00 ubuntu2204 systemd-logind[808]: New session 4 of user ubuntu.
+2024-04-29T16:26:56.415274-04:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2024-04-29T16:26:56.769926-04:00 ubuntu2204 gnome-keyring-daemon[1750]: The Secret Service was already initialized
+2024-04-29T16:26:56.770434-04:00 ubuntu2204 gnome-keyring-daemon[1899]: discover_other_daemon: 1
+2024-04-29T16:26:56.774388-04:00 ubuntu2204 gnome-keyring-daemon[1750]: The PKCS#11 component was already initialized
+2024-04-29T16:26:56.774891-04:00 ubuntu2204 gnome-keyring-daemon[1903]: discover_other_daemon: 1
+2024-04-29T16:26:56.785517-04:00 ubuntu2204 gnome-keyring-daemon[1905]: discover_other_daemon: 1
+2024-04-29T16:26:58.551616-04:00 ubuntu2204 polkitd[795]: Registered Authentication Agent for unix-session:4 (system bus name :1.77 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:27:00.533055-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2024-04-29T16:27:00.553264-04:00 ubuntu2204 systemd-logind[808]: Session c1 logged out. Waiting for processes to exit.
+2024-04-29T16:27:00.591958-04:00 ubuntu2204 polkitd[795]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.38, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2024-04-29T16:27:00.601661-04:00 ubuntu2204 systemd-logind[808]: Removed session c1.
+2024-04-29T16:27:02.747621-04:00 ubuntu2204 sshd[1249]: pam_unix(sshd:session): session closed for user ubuntu
+2024-04-29T16:27:02.756898-04:00 ubuntu2204 systemd-logind[808]: Session 2 logged out. Waiting for processes to exit.
+2024-04-29T16:27:02.760057-04:00 ubuntu2204 systemd-logind[808]: Removed session 2.
+2024-04-29T16:27:10.723761-04:00 ubuntu2204 (sd-pam): pam_unix(systemd-user:session): session closed for user gdm
+2024-04-29T16:27:24.349573-04:00 ubuntu2204 polkitd[795]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2024-04-29T16:27:27.462031-04:00 ubuntu2204 polkitd[795]: Operator of unix-session:4 successfully authenticated as unix-user:ubuntu to gain ONE-SHOT authorization for action org.freedesktop.policykit.exec for unix-process:2751:3659 [/bin/sh /media/ubuntu/VBox_GAs_7.0.14/runasroot.sh --has-terminal VirtualBox Guest Additions installation /bin/sh /media/ubuntu/VBox\_GAs\_7\.0\.14/VBoxLinuxAdditions\.run --xwin Please try running "/media/ubuntu/VBox_GAs_7.0.14/VBoxLinuxAdditions.run" manually.] (owned by unix-user:ubuntu)
+2024-04-29T16:27:27.465721-04:00 ubuntu2204 pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2024-04-29T16:27:27.467784-04:00 ubuntu2204 pkexec[2756]: ubuntu: Executing command [USER=root] [TTY=/dev/pts/0] [CWD=/media/ubuntu/VBox_GAs_7.0.14] [COMMAND=/bin/sh /media/ubuntu/VBox_GAs_7.0.14/VBoxLinuxAdditions.run --xwin]
+2024-04-29T16:27:38.575485-04:00 ubuntu2204 useradd[3796]: new user: name=vboxadd, UID=997, GID=1, home=/var/run/vboxadd, shell=/bin/false, from=/dev/pts/0
+2024-04-29T16:27:38.596021-04:00 ubuntu2204 useradd[3803]: failed adding user 'vboxadd', exit code: 9
+2024-04-29T16:27:38.641945-04:00 ubuntu2204 groupadd[3812]: group added to /etc/group: name=vboxsf, GID=984
+2024-04-29T16:27:38.646649-04:00 ubuntu2204 groupadd[3812]: group added to /etc/gshadow: name=vboxsf
+2024-04-29T16:27:38.648408-04:00 ubuntu2204 groupadd[3812]: new group: name=vboxsf, GID=984
+2024-04-29T16:27:38.664682-04:00 ubuntu2204 groupadd[3819]: group added to /etc/group: name=vboxdrmipc, GID=983
+2024-04-29T16:27:38.669211-04:00 ubuntu2204 groupadd[3819]: group added to /etc/gshadow: name=vboxdrmipc
+2024-04-29T16:27:38.670929-04:00 ubuntu2204 groupadd[3819]: new group: name=vboxdrmipc, GID=983
+2024-04-29T16:27:52.567613-04:00 ubuntu2204 useradd[5108]: failed adding user 'vboxadd', exit code: 9
+2024-04-29T16:27:52.569184-04:00 ubuntu2204 useradd[5109]: failed adding user 'vboxadd', exit code: 9
+2024-04-29T16:29:57.542928-04:00 ubuntu2204 systemd-logind[808]: The system will power off now!
+2024-04-29T16:29:57.575370-04:00 ubuntu2204 systemd-logind[808]: System is powering down.
+2024-04-29T16:29:57.631359-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session closed for user ubuntu
+2024-04-29T16:30:44.318392-04:00 ubuntu2204 systemd-logind[809]: New seat seat0.
+2024-04-29T16:30:44.318395-04:00 ubuntu2204 systemd-logind[809]: Watching system buttons on /dev/input/event0 (Power Button)
+2024-04-29T16:30:44.318399-04:00 ubuntu2204 systemd-logind[809]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2024-04-29T16:30:44.318402-04:00 ubuntu2204 systemd-logind[809]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2024-04-29T16:30:44.366874-04:00 ubuntu2204 polkitd[792]: Loading rules from directory /etc/polkit-1/rules.d
+2024-04-29T16:30:44.367525-04:00 ubuntu2204 polkitd[792]: Loading rules from directory /usr/share/polkit-1/rules.d
+2024-04-29T16:30:44.396878-04:00 ubuntu2204 polkitd[792]: Finished loading, compiling and executing 15 rules
+2024-04-29T16:30:44.401389-04:00 ubuntu2204 polkitd[792]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2024-04-29T16:30:52.631176-04:00 ubuntu2204 useradd[1464]: failed adding user 'vboxadd', exit code: 9
+2024-04-29T16:30:52.633597-04:00 ubuntu2204 useradd[1465]: failed adding user 'vboxadd', exit code: 9
+2024-04-29T16:31:02.758949-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2024-04-29T16:31:02.787895-04:00 ubuntu2204 systemd-logind[809]: New session c1 of user gdm.
+2024-04-29T16:31:02.821245-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2024-04-29T16:31:05.248530-04:00 ubuntu2204 polkitd[792]: Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:31:10.986966-04:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2024-04-29T16:31:10.987049-04:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2024-04-29T16:31:11.001499-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:31:11.026286-04:00 ubuntu2204 systemd-logind[809]: New session 2 of user ubuntu.
+2024-04-29T16:31:11.060069-04:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2024-04-29T16:31:11.513254-04:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2024-04-29T16:31:11.991030-04:00 ubuntu2204 gnome-keyring-daemon[2862]: The PKCS#11 component was already initialized
+2024-04-29T16:31:11.992727-04:00 ubuntu2204 gnome-keyring-daemon[3058]: discover_other_daemon: 1
+2024-04-29T16:31:11.993482-04:00 ubuntu2204 gnome-keyring-daemon[2862]: The Secret Service was already initialized
+2024-04-29T16:31:11.994204-04:00 ubuntu2204 gnome-keyring-daemon[3060]: discover_other_daemon: 1
+2024-04-29T16:31:12.009266-04:00 ubuntu2204 gnome-keyring-daemon[3066]: discover_other_daemon: 1
+2024-04-29T16:31:13.808332-04:00 ubuntu2204 polkitd[792]: Registered Authentication Agent for unix-session:2 (system bus name :1.76 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2024-04-29T16:31:14.744896-04:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2024-04-29T16:31:14.759878-04:00 ubuntu2204 systemd-logind[809]: Session c1 logged out. Waiting for processes to exit.
+2024-04-29T16:31:14.812288-04:00 ubuntu2204 polkitd[792]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.39, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2024-04-29T16:31:14.816123-04:00 ubuntu2204 systemd-logind[809]: Removed session c1.
+2024-04-29T16:31:34.284516-04:00 ubuntu2204 systemd-logind[809]: The system will power off now!
+2024-04-29T16:31:34.310189-04:00 ubuntu2204 systemd-logind[809]: System is powering down.
+2024-04-29T16:31:34.338886-04:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session closed for user ubuntu
+2025-01-23T10:57:57.652300-05:00 ubuntu2204 systemd-logind[881]: New seat seat0.
+2025-01-23T10:57:57.652303-05:00 ubuntu2204 systemd-logind[881]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-01-23T10:57:57.652306-05:00 ubuntu2204 systemd-logind[881]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-01-23T10:57:57.652308-05:00 ubuntu2204 systemd-logind[881]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-01-23T10:57:57.690779-05:00 ubuntu2204 polkitd[859]: Loading rules from directory /etc/polkit-1/rules.d
+2025-01-23T10:57:57.691499-05:00 ubuntu2204 polkitd[859]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-01-23T10:57:57.732950-05:00 ubuntu2204 polkitd[859]: Finished loading, compiling and executing 15 rules
+2025-01-23T10:57:57.737683-05:00 ubuntu2204 polkitd[859]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-01-23T10:58:08.283618-05:00 ubuntu2204 useradd[1613]: failed adding user 'vboxadd', exit code: 9
+2025-01-23T10:58:08.286893-05:00 ubuntu2204 useradd[1614]: failed adding user 'vboxadd', exit code: 9
+2025-01-23T10:58:18.364770-05:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-01-23T10:58:18.423109-05:00 ubuntu2204 systemd-logind[881]: New session c1 of user gdm.
+2025-01-23T10:58:18.455318-05:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-01-23T10:58:20.318804-05:00 ubuntu2204 polkitd[859]: Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T10:58:27.313792-05:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2025-01-23T10:58:27.313853-05:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2025-01-23T10:58:27.403337-05:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2025-01-23T10:58:27.464448-05:00 ubuntu2204 systemd-logind[881]: New session 2 of user ubuntu.
+2025-01-23T10:58:29.063685-05:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2025-01-23T10:58:29.781570-05:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2025-01-23T10:58:30.192492-05:00 ubuntu2204 gnome-keyring-daemon[3132]: The PKCS#11 component was already initialized
+2025-01-23T10:58:30.193592-05:00 ubuntu2204 gnome-keyring-daemon[3354]: discover_other_daemon: 1
+2025-01-23T10:58:30.198682-05:00 ubuntu2204 gnome-keyring-daemon[3132]: The Secret Service was already initialized
+2025-01-23T10:58:30.199072-05:00 ubuntu2204 gnome-keyring-daemon[3356]: discover_other_daemon: 1
+2025-01-23T10:58:30.200314-05:00 ubuntu2204 gnome-keyring-daemon[3355]: discover_other_daemon: 1
+2025-01-23T10:58:31.577781-05:00 ubuntu2204 polkitd[859]: Registered Authentication Agent for unix-session:2 (system bus name :1.76 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T10:58:32.967623-05:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-01-23T10:58:32.969418-05:00 ubuntu2204 polkitd[859]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.39, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T10:58:32.977514-05:00 ubuntu2204 systemd-logind[881]: Session c1 logged out. Waiting for processes to exit.
+2025-01-23T10:58:32.994816-05:00 ubuntu2204 systemd-logind[881]: Removed session c1.
+2025-01-23T10:58:43.402428-05:00 ubuntu2204 (sd-pam): pam_unix(systemd-user:session): session closed for user gdm
+2025-01-23T11:01:35.691467-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/loadkeys es
+2025-01-23T11:01:35.692378-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:01:35.863261-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:02:01.939337-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/dpkg-reconfigure console-setupe
+2025-01-23T11:02:01.939529-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:02:02.148699-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:02:03.408269-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/dpkg-reconfigure console-setup
+2025-01-23T11:02:03.408909-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:02:18.716691-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:02:22.053391-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/loadkeys es
+2025-01-23T11:02:22.054393-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:02:22.235608-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:02:33.420898-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/sbin/dpkg-reconfigure console-setup
+2025-01-23T11:02:33.421377-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:02:51.686224-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:02:59.004365-05:00 ubuntu2204 systemd-logind[881]: The system will reboot now!
+2025-01-23T11:02:59.020352-05:00 ubuntu2204 systemd-logind[881]: System is rebooting.
+2025-01-23T11:02:59.038827-05:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session closed for user ubuntu
+2025-01-23T11:03:12.493282-05:00 ubuntu2204 systemd-logind[842]: New seat seat0.
+2025-01-23T11:03:12.493291-05:00 ubuntu2204 systemd-logind[842]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-01-23T11:03:12.493293-05:00 ubuntu2204 systemd-logind[842]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-01-23T11:03:12.493296-05:00 ubuntu2204 systemd-logind[842]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-01-23T11:03:12.488728-05:00 ubuntu2204 polkitd[827]: Loading rules from directory /etc/polkit-1/rules.d
+2025-01-23T11:03:12.491993-05:00 ubuntu2204 polkitd[827]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-01-23T11:03:12.525131-05:00 ubuntu2204 polkitd[827]: Finished loading, compiling and executing 15 rules
+2025-01-23T11:03:12.528785-05:00 ubuntu2204 polkitd[827]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-01-23T11:03:22.137420-05:00 ubuntu2204 useradd[1530]: failed adding user 'vboxadd', exit code: 9
+2025-01-23T11:03:22.139360-05:00 ubuntu2204 useradd[1531]: failed adding user 'vboxadd', exit code: 9
+2025-01-23T11:03:32.627363-05:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-01-23T11:03:32.662053-05:00 ubuntu2204 systemd-logind[842]: New session c1 of user gdm.
+2025-01-23T11:03:32.695073-05:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-01-23T11:03:34.462253-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:03:39.078794-05:00 ubuntu2204 gdm-password]: gkr-pam: unable to locate daemon control file
+2025-01-23T11:03:39.083807-05:00 ubuntu2204 gdm-password]: gkr-pam: stashed password to try later in open session
+2025-01-23T11:03:39.120414-05:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2025-01-23T11:03:39.168644-05:00 ubuntu2204 systemd-logind[842]: New session 2 of user ubuntu.
+2025-01-23T11:03:39.203580-05:00 ubuntu2204 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2025-01-23T11:03:39.558898-05:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2025-01-23T11:03:39.907730-05:00 ubuntu2204 gnome-keyring-daemon[3038]: The PKCS#11 component was already initialized
+2025-01-23T11:03:39.907949-05:00 ubuntu2204 gnome-keyring-daemon[3249]: discover_other_daemon: 1
+2025-01-23T11:03:39.919458-05:00 ubuntu2204 gnome-keyring-daemon[3250]: discover_other_daemon: 1
+2025-01-23T11:03:39.921186-05:00 ubuntu2204 gnome-keyring-daemon[3038]: The Secret Service was already initialized
+2025-01-23T11:03:39.921258-05:00 ubuntu2204 gnome-keyring-daemon[3252]: discover_other_daemon: 1
+2025-01-23T11:03:40.974582-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-session:2 (system bus name :1.76 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:03:41.343599-05:00 ubuntu2204 gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-01-23T11:03:41.356103-05:00 ubuntu2204 systemd-logind[842]: Session c1 logged out. Waiting for processes to exit.
+2025-01-23T11:03:41.380015-05:00 ubuntu2204 systemd-logind[842]: Removed session c1.
+2025-01-23T11:03:41.395135-05:00 ubuntu2204 polkitd[827]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.39, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T11:03:51.667550-05:00 ubuntu2204 (sd-pam): pam_unix(systemd-user:session): session closed for user gdm
+2025-01-23T11:04:08.311580-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/loadkeys
+2025-01-23T11:04:08.312460-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:04:13.757202-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:04:15.503936-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/loadkeys es
+2025-01-23T11:04:15.504465-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:04:15.678988-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:05:01.379024-05:00 ubuntu2204 CRON[4208]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:05:01.382629-05:00 ubuntu2204 CRON[4208]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:07:17.013898-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-process:4321:24884 (system bus name :1.109 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:07:17.038890-05:00 ubuntu2204 polkitd[827]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2025-01-23T11:07:19.687651-05:00 ubuntu2204 polkitd[827]: Operator of unix-session:2 successfully authenticated as unix-user:ubuntu to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.110 [systemctl restart Network.manager] (owned by unix-user:ubuntu)
+2025-01-23T11:07:19.696967-05:00 ubuntu2204 polkitd[827]: Unregistered Authentication Agent for unix-process:4321:24884 (system bus name :1.109, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T11:07:30.222081-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-process:4351:26205 (system bus name :1.112 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:07:30.245249-05:00 ubuntu2204 polkitd[827]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2025-01-23T11:07:32.279459-05:00 ubuntu2204 polkitd[827]: Operator of unix-session:2 successfully authenticated as unix-user:ubuntu to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.113 [systemctl restart networking] (owned by unix-user:ubuntu)
+2025-01-23T11:07:32.284071-05:00 ubuntu2204 polkitd[827]: Unregistered Authentication Agent for unix-process:4351:26205 (system bus name :1.112, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T11:07:35.421012-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-process:4380:26725 (system bus name :1.115 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:07:35.445510-05:00 ubuntu2204 polkitd[827]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2025-01-23T11:07:37.322207-05:00 ubuntu2204 polkitd[827]: Operator of unix-session:2 successfully authenticated as unix-user:ubuntu to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.116 [systemctl restart network] (owned by unix-user:ubuntu)
+2025-01-23T11:07:37.324496-05:00 ubuntu2204 polkitd[827]: Unregistered Authentication Agent for unix-process:4380:26725 (system bus name :1.115, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T11:08:19.959403-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/systemctl restart NetworkManager
+2025-01-23T11:08:19.963431-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T11:08:20.614135-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T11:08:25.707824-05:00 ubuntu2204 polkitd[827]: Registered Authentication Agent for unix-process:5482:31754 (system bus name :1.125 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-01-23T11:08:25.735154-05:00 ubuntu2204 polkitd[827]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2025-01-23T11:08:27.676219-05:00 ubuntu2204 polkitd[827]: Operator of unix-session:2 successfully authenticated as unix-user:ubuntu to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.126 [systemctl restart NetworkManager] (owned by unix-user:ubuntu)
+2025-01-23T11:08:28.195627-05:00 ubuntu2204 polkitd[827]: Unregistered Authentication Agent for unix-process:unknown (system bus name :1.125, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-01-23T11:08:43.345197-05:00 ubuntu2204 sshd[5752]: Server listening on :: port 22.
+2025-01-23T11:08:58.950531-05:00 ubuntu2204 sshd[5754]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.35  user=root
+2025-01-23T11:09:00.171245-05:00 ubuntu2204 sshd[5754]: Failed password for root from 192.168.1.35 port 51940 ssh2
+2025-01-23T11:10:43.359295-05:00 ubuntu2204 sshd[5754]: fatal: Timeout before authentication for 192.168.1.35 port 51940
+2025-01-23T11:15:01.823515-05:00 ubuntu2204 CRON[5793]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:15:01.826452-05:00 ubuntu2204 CRON[5793]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:16:09.254756-05:00 ubuntu2204 sshd[5813]: Connection closed by 127.0.0.1 port 44490 [preauth]
+2025-01-23T11:16:18.537971-05:00 ubuntu2204 sshd[5816]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=127.0.0.1  user=ubuntu
+2025-01-23T11:16:20.490162-05:00 ubuntu2204 sshd[5816]: Failed password for ubuntu from 127.0.0.1 port 42418 ssh2
+2025-01-23T11:16:24.905468-05:00 ubuntu2204 sshd[5816]: Failed password for ubuntu from 127.0.0.1 port 42418 ssh2
+2025-01-23T11:16:27.252608-05:00 ubuntu2204 sshd[5816]: Connection closed by authenticating user ubuntu 127.0.0.1 port 42418 [preauth]
+2025-01-23T11:16:27.252820-05:00 ubuntu2204 sshd[5816]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=127.0.0.1  user=ubuntu
+2025-01-23T11:17:01.911835-05:00 ubuntu2204 CRON[5821]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:17:01.922251-05:00 ubuntu2204 CRON[5821]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:25:01.235749-05:00 ubuntu2204 CRON[5851]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:25:01.239253-05:00 ubuntu2204 CRON[5851]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:30:01.285029-05:00 ubuntu2204 CRON[5855]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:30:01.288851-05:00 ubuntu2204 CRON[5855]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:35:01.337172-05:00 ubuntu2204 CRON[5866]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:35:01.419835-05:00 ubuntu2204 CRON[5866]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:40:28.659868-05:00 ubuntu2204 dbus-daemon[817]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+2025-01-23T11:45:01.185254-05:00 ubuntu2204 CRON[5925]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:45:01.193298-05:00 ubuntu2204 CRON[5925]: pam_unix(cron:session): session closed for user root
+2025-01-23T11:55:01.642728-05:00 ubuntu2204 CRON[5934]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T11:55:01.652796-05:00 ubuntu2204 CRON[5934]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:05:01.831535-05:00 ubuntu2204 CRON[6097]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:05:01.835353-05:00 ubuntu2204 CRON[6097]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:15:02.014408-05:00 ubuntu2204 CRON[6135]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:15:02.022730-05:00 ubuntu2204 CRON[6135]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:15:36.946707-05:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2025-01-23T12:17:01.042965-05:00 ubuntu2204 CRON[6221]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:17:01.046365-05:00 ubuntu2204 CRON[6221]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:21:51.451603-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+2025-01-23T12:21:51.454301-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T12:21:51.518050-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T12:22:00.237909-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/sbin/ufw active
+2025-01-23T12:22:00.239482-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T12:22:00.275301-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T12:22:19.680066-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/sbin/ufw enable
+2025-01-23T12:22:19.680487-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T12:22:20.081307-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T12:25:01.285088-05:00 ubuntu2204 CRON[6467]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:25:01.291762-05:00 ubuntu2204 CRON[6467]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:30:01.318884-05:00 ubuntu2204 CRON[6480]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:30:01.323367-05:00 ubuntu2204 CRON[6480]: pam_unix(cron:session): session closed for user root
+2025-01-23T12:31:26.645305-05:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname=ubuntu uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=ubuntu
+2025-01-23T12:31:33.163781-05:00 ubuntu2204 gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname=ubuntu uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=ubuntu
+2025-01-23T12:31:37.267919-05:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2025-01-23T12:33:45.867339-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/sbin/ufw logging full
+2025-01-23T12:33:45.869427-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T12:33:46.353750-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T12:34:42.443138-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/1 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt-get install terminator
+2025-01-23T12:34:42.444089-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T12:34:52.765795-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T12:35:01.359629-05:00 ubuntu2204 CRON[6875]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T12:35:01.375637-05:00 ubuntu2204 CRON[6875]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:29:44.021315-05:00 ubuntu2204 CRON[6953]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:29:44.025175-05:00 ubuntu2204 CRON[6953]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:29:44.028032-05:00 ubuntu2204 CRON[6955]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:29:44.030348-05:00 ubuntu2204 CRON[6955]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:30:01.037107-05:00 ubuntu2204 CRON[6957]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:30:01.039022-05:00 ubuntu2204 CRON[6957]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:35:01.183189-05:00 ubuntu2204 CRON[6977]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:35:01.187454-05:00 ubuntu2204 CRON[6977]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:45:01.241536-05:00 ubuntu2204 CRON[6988]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:45:01.247835-05:00 ubuntu2204 CRON[6988]: pam_unix(cron:session): session closed for user root
+2025-01-23T15:50:44.535509-05:00 ubuntu2204 gdm-password]: gkr-pam: unlocked login keyring
+2025-01-23T15:53:48.366630-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/1 ; PWD=/home/ubuntu/ejemplosed ; USER=root ; COMMAND=/usr/bin/apt-get install curl
+2025-01-23T15:53:48.393112-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T15:53:49.298394-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T15:53:59.073341-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/1 ; PWD=/home/ubuntu/ejemplosed ; USER=root ; COMMAND=/usr/bin/apt-get update
+2025-01-23T15:53:59.074001-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T15:54:06.922757-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T15:54:22.953192-05:00 ubuntu2204 sudo:   ubuntu : TTY=pts/1 ; PWD=/home/ubuntu/ejemplosed ; USER=root ; COMMAND=/usr/bin/apt-get install curl
+2025-01-23T15:54:22.953815-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2025-01-23T15:54:27.166941-05:00 ubuntu2204 sudo: pam_unix(sudo:session): session closed for user root
+2025-01-23T15:55:01.556043-05:00 ubuntu2204 CRON[7719]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T15:55:01.559273-05:00 ubuntu2204 CRON[7719]: pam_unix(cron:session): session closed for user root
+2025-01-23T16:05:01.928697-05:00 ubuntu2204 CRON[8075]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T16:05:01.933988-05:00 ubuntu2204 CRON[8075]: pam_unix(cron:session): session closed for user root
+2025-01-23T16:15:01.027096-05:00 ubuntu2204 CRON[8118]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T16:15:01.035073-05:00 ubuntu2204 CRON[8118]: pam_unix(cron:session): session closed for user root
+2025-01-23T16:17:01.062559-05:00 ubuntu2204 CRON[8122]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-01-23T16:17:01.067568-05:00 ubuntu2204 CRON[8122]: pam_unix(cron:session): session closed for user root
