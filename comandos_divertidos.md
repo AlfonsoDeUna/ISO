@@ -21,7 +21,7 @@
 20. **Usa una voz en español:** `espeak -v spanish "La terminal puede hablar"`
 21. **Muestra los usuarios conectados:** `w`
 
-**ESPECIAL** neofecht
+**ESPECIAL** neofetch
 
 ### **Animaciones y Efectos Visuales**
 22. **Muestra una locomotora de vapor:** `sl`
