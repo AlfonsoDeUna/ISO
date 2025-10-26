@@ -19,7 +19,7 @@ sudo nano 02-network-manager-all.yaml
 ```
 network:
   version: 2
-  renderer: networkd
+  renderer: NetworkManager
   ethernets:
     enp0s3:
       dhcp4: true
@@ -44,7 +44,7 @@ ESTE TEXTO TIENES QUE PEGARLO DENTRO DEL EDITOR NANO EN EL FICHEOR ABIERTO 02-ne
 ```
 network:
   version: 2
-  renderer: networkd
+  renderer: NetworkManager
   ethernets:
     enp0s3:
       dhcp4: false
