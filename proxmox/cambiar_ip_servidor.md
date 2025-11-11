@@ -40,7 +40,6 @@ Este archivo define la dirección IP estática, la máscara de red y la puerta d
 
 4.  Guarda los cambios y cierra el editor (en `nano`, es `Ctrl + O` para guardar y `Ctrl + X` para salir).
 
------
 
 ## 2\. Editar el archivo hosts
 
@@ -72,7 +71,7 @@ Este archivo mapea nombres de host a direcciones IP. Es crucial actualizarlo par
 
 4.  Guarda los cambios y cierra el editor.
 
------
+
 
 ## 3\. Aplicar los cambios
 
