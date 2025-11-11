@@ -1,4 +1,4 @@
-# GUÍA PARA MODIFICAR LA IP DEL SERVIDOR
+# GUÍA PARA MODIFICAR LA IP DEL SERVIDOR PROXMOX
 
 ## 1\. Editar el archivo de configuración de red
 
