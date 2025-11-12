@@ -7,7 +7,7 @@ Aprender la sintaxis básica del lenguaje de marcas Markdown para estructurar la
 Puedes usar cualquier manual básico de Markdown, por ejemplo Markdown cheat sheet. 
 * https://www.markdownguide.org/cheat-sheet/
 
-¿Qué tienes que hacer?Permalink
+¿Qué tienes que hacer?
 En el menú de notas de tu nodo, crea una nota. 
 
 **Esta nota tiene que tener los siguientes elementos en este orden:**
