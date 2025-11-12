@@ -1,4 +1,4 @@
-# Ejercicio 2: Introducción a Markdown
+# Introducción a Markdown
 ## ¿Qué vas a aprender en este ejercicio?
 Aprender la sintaxis básica del lenguaje de marcas Markdown para estructurar la información.
 
