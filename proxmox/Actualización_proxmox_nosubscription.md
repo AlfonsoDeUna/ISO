@@ -89,5 +89,5 @@ Finalmente, actualiza los paquetes del sistema.
   * Ejecuta el comando:
 
     ```bash
-    apt upgrade
+    apt dist-upgrade
     ```
