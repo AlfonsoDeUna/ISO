@@ -19,6 +19,5 @@ En el menú de notas de tu nodo, crea una nota.
 * Una lista ordenada
 * Una lista desordenada.
 * Un enlace a una URL externa.
-* Un enlace a otro fichero Markdown que tengas en el repositorio.
 * Una imagen
 * Una tabla
