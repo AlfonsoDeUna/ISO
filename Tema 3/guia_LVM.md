@@ -70,7 +70,7 @@ df -h
 
 ## 3. Gestión Avanzada: Redimensionamiento (Scaling)Si te quedas sin espacio en el volumen lógico (`myvol1`), puedes expandirlo en caliente sin reiniciar el servidor.
 
-###A. Extender el Volumen Lógico (Capa LVM)Este comando asigna el **100% del espacio libre restante** en el grupo de volúmenes al volumen lógico:
+### A. Extender el Volumen Lógico (Capa LVM)Este comando asigna el **100% del espacio libre restante** en el grupo de volúmenes al volumen lógico:
 
 ```bash
 sudo lvextend -l +100%FREE /dev/vg-test/myvol1
