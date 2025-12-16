@@ -102,14 +102,16 @@ Una vez extendido el grupo, puedes volver a ejecutar los pasos **A** y **B** par
 
 El proceso de eliminación se realiza en orden inverso a la creación.
 
-### 1. Desmontar el sistema de archivos```bash
+### 1. Desmontar el sistema de archivos
+
+```bash
 sudo umount /mnt/lvm/myvol1
-
-### 2. Eliminar el Volumen Lógico (LV)```bash
-
 ```
-sudo lvremove /dev/vg-test/myvol1
 
+### 2. Eliminar el Volumen Lógico (LV)
+
+```bash
+sudo lvremove /dev/vg-test/myvol1
 ```
 
 ### 3. Eliminar el Grupo de Volúmenes (VG)
@@ -119,6 +121,7 @@ sudo vgremove vg-test
 ```
 
 ### 4. Eliminar las etiquetas de Volúmenes Físicos (PV)Esto devuelve los discos a su estado "normal" (sin formato LVM).
+
 ```bash
 sudo pvremove /dev/sdb /dev/sdc /dev/sdd /dev/sde
 ```
