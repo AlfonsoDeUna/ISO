@@ -1,5 +1,4 @@
-
-#Guía de Migración de Sistema Linux a LVM (Logical Volume Manager)Esta guía documenta paso a paso el proceso para transformar un servidor con particiones físicas estándar (o mal particionado) a una estructura flexible LVM, permitiendo separar `/home`, `/var`, `/tmp`, y `/` (root) sin reinstalar el sistema operativo.
+# Guía de Migración de Sistema Linux a LVM (Logical Volume Manager)Esta guía documenta paso a paso el proceso para transformar un servidor con particiones físicas estándar (o mal particionado) a una estructura flexible LVM, permitiendo separar `/home`, `/var`, `/tmp`, y `/` (root) sin reinstalar el sistema operativo.
 
 > **Basado en el tutorial:** [Migración a LVM - Alexia la chica de sistemas]
 
@@ -9,7 +8,7 @@
 
 
 
-##1. Identificación de DiscosVerificar los discos conectados al sistema para identificar cuáles se usarán en el nuevo esquema LVM.
+## 1. Identificación de DiscosVerificar los discos conectados al sistema para identificar cuáles se usarán en el nuevo esquema LVM.
 
 ```bash
 sudo lsblk
@@ -18,7 +17,7 @@ sudo lsblk
 
 * **Explicación:** Lista los dispositivos de bloque. Buscamos los discos que no son del sistema actual (ej. `sdb`, `sdc`...).
 
-##2. Inicialización de Volúmenes Físicos (PV)Prepara los discos físicos para ser usados por LVM.
+## 2. Inicialización de Volúmenes Físicos (PV)Prepara los discos físicos para ser usados por LVM.
 
 ```bash
 sudo pvcreate /dev/sdb /dev/sdc /dev/sdd /dev/sde
@@ -28,7 +27,7 @@ sudo pvcreate /dev/sdb /dev/sdc /dev/sdd /dev/sde
 * **Explicación:** Marca los discos seleccionados como "Physical Volumes".
 * **Verificación:** `sudo pvs`.
 
-##3. Configuración del Grupo de Volúmenes (VG)Crea una única entidad de almacenamiento sumando la capacidad de los discos físicos.
+## 3. Configuración del Grupo de Volúmenes (VG)Crea una única entidad de almacenamiento sumando la capacidad de los discos físicos.
 
 ```bash
 # Crear el grupo (llamado 'bgx') con el primer disco
@@ -42,7 +41,7 @@ sudo vgextend bgx /dev/sdc /dev/sdd /dev/sde
 * **Explicación:** Se recomienda usar un solo *Volume Group* para facilitar la gestión del espacio libre.
 * **Verificación:** `sudo vgs` o `sudo vgdisplay`.
 
-##4. Creación de Volúmenes Lógicos (LV)Crea las particiones virtuales para cada punto de montaje.
+## 4. Creación de Volúmenes Lógicos (LV)Crea las particiones virtuales para cada punto de montaje.
 
 ```bash
 # Ejemplo: Crear volúmenes para tmp, opt, var, home y root
@@ -57,7 +56,7 @@ sudo lvcreate -n root -L 5G bgx
 * **Opciones:** `-n` (nombre), `-L` (tamaño), `bgx` (nombre del grupo).
 * **Nota:** Ajusta los tamaños (`5G`, `1G`) según tus necesidades reales.
 
-##5. Formateo de Volúmenes (Filesystem XFS)Instala soporte para XFS y formatea los nuevos volúmenes.
+## 5. Formateo de Volúmenes (Filesystem XFS)Instala soporte para XFS y formatea los nuevos volúmenes.
 
 ```bash
 # Instalar herramientas (Debian/Ubuntu)
@@ -70,11 +69,13 @@ sudo mkfs.xfs /dev/mapper/bgx-tmp
 sudo mkfs.xfs /dev/mapper/bgx-var
 sudo mkfs.xfs /dev/mapper/bgx-home
 
+sudo mkfs.ext4 /dev/vg-test/myvol1
+
 ```
 
 * **Explicación:** Se utiliza XFS por su eficiencia en servidores de alto rendimiento.
 
-##6. Migración de Datos (Ejemplo con `/tmp`)El proceso para mover datos de una carpeta del sistema actual al nuevo LVM. *Repetir para var, home, opt.*
+## 6. Migración de Datos (Ejemplo con `/tmp`)El proceso para mover datos de una carpeta del sistema actual al nuevo LVM. *Repetir para var, home, opt.*
 
 ```bash
 # 1. Crear punto de montaje temporal
@@ -97,7 +98,7 @@ sudo mount /dev/mapper/bgx-tmp /tmp
 
 ```
 
-##7. Persistencia (fstab)Configurar el arranque automático de los nuevos volúmenes.
+## 7. Persistencia (fstab)Configurar el arranque automático de los nuevos volúmenes.
 
 1. **Obtener UUID:**
 ```bash
@@ -121,7 +122,7 @@ UUID=1234-abcd-5678-efgh  /tmp  xfs  defaults  0  2
 
 
 
-##8. Extensión de Volúmenes (Upsizing)Cómo agregar espacio a un volumen en caliente.
+## 8. Extensión de Volúmenes (Upsizing)Cómo agregar espacio a un volumen en caliente.
 
 ```bash
 # 1. Extender el volumen lógico (sumar 1GB)
@@ -134,7 +135,7 @@ sudo xfs_growfs /dev/mapper/bgx-tmp
 
 * **Nota:** Si usaras EXT4, el comando sería `resize2fs`.
 
-##9. Migración del Sistema Raíz (ROOT)Mover el sistema operativo completo.
+## 9. Migración del Sistema Raíz (ROOT)Mover el sistema operativo completo.
 
 ```bash
 # 1. Preparar directorio y montaje
@@ -149,7 +150,7 @@ sudo rsync -axvH --exclude=tmp --exclude=mnt / /mnt/nuevo_root
 
 * **Flags Rsync:** `-a` (archive), `-x` (no cruzar filesystems), `-v` (verbose), `-H` (hard links).
 
-##10. Reinstalación del Bootloader (GRUB)Hacer que el sistema arranque desde el nuevo LVM.
+## 10. Reinstalación del Bootloader (GRUB)Hacer que el sistema arranque desde el nuevo LVM.
 
 ```bash
 # 1. Montar directorios de sistema en el nuevo entorno
@@ -168,7 +169,7 @@ exit
 
 ```
 
-###⚠️ Solución de Problemas (Arranque Fallido)Si `update-grub` no detecta el cambio automáticamente:
+### Solución de Problemas (Arranque Fallido)Si `update-grub` no detecta el cambio automáticamente:
 
 1. Editar `/boot/grub/grub.cfg`.
 2. Buscar el UUID del disco viejo.
@@ -185,7 +186,7 @@ sudo vgextend bgx /dev/sda1
 
 
 
-##Anexo: Revertir Cambios (Limpieza)Comandos para eliminar toda la estructura creada (¡Peligro de pérdida de datos!).
+# Anexo: Revertir Cambios (Limpieza)Comandos para eliminar toda la estructura creada (¡Peligro de pérdida de datos!).
 
 ```bash
 # 1. Desmontar todo
