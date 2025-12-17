@@ -67,7 +67,7 @@ sudo rsync -axvH --exclude=mnt / /mnt/nuevo_root
 
 ```
 
-## ⚙️ Paso 4: Preparación del Entorno (Chroot)
+## Paso 4: Preparación del Entorno (Chroot)
 
 Para configurar el arranque, debemos "entrar" en el nuevo sistema.
 
@@ -84,7 +84,7 @@ umount /mnt/nuevo_root/dev /mnt/nuevo_root/sys /mnt/nuevo_root/proc
 
 ```
 
-## 📝 Paso 5: Actualización de Fstab
+## Paso 5: Actualización de Fstab
 
 El sistema debe saber dónde montar la raíz al arrancar.
 
