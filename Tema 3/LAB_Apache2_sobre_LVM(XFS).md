@@ -5,6 +5,7 @@ Instalar un servidor web Apache y migrar su directorio de publicación por defec
 Primero, aseguramos que el servicio web esté instalado y funcionando con la configuración por defecto.
 
 # Actualizar repositorios e instalar Apache
+```bash
 sudo apt update && sudo apt install apache2 xfsprogs -y
 
 # Verificar que el servicio está corriendo
@@ -29,35 +30,43 @@ crea el comando  y copia un pantallazo
 # Llamaremos al volumen 'lv_html' y le daremos 5GB (ajusta según necesites)
 crea el comando  y copia un pantallazo
 3. Formateo en EXT4
-Formateamos el nuevo volumen con el sistema de archivos EXT4, tal como se solicitó.
+Formateamos el nuevo volumen con el sistema de archivos XFS.
 
 # Formatear el volumen lógico con XFS
 sudo mkfs.xfs /dev/mapper/vg_web-lv_html
 4. Migración de Datos (El Cambio)
 Ahora debemos mover el contenido existente de Apache al nuevo disco sin perder permisos.
+```
 
-# 1. Detener Apache para evitar conflictos
+## 1. Detener Apache para evitar conflictos
+```bash
 sudo systemctl stop apache2
+```
 
-# 2. Renombrar la carpeta actual (esto sirve como backup)
+## 2. Renombrar la carpeta actual (esto sirve como backup)
+```bash
 sudo mv /var/www/html /var/www/html_backup
-
-# 3. Recrear la carpeta vacía (será el punto de montaje)
+```
+## 3. Recrear la carpeta vacía (será el punto de montaje)
+```bash
 sudo mkdir /var/www/html
+```
 
-# 4. Montar temporalmente el nuevo volumen LVM
+## 4. Montar temporalmente el nuevo volumen LVM
+```bash
 sudo mount /dev/mapper/vg_web-lv_html /var/www/html
+```
 
-# 5. Copiar los archivos del backup al nuevo disco
-# -a: preserva permisos (dueño www-data, grupos, etc.)
-sudo cp -a /var/www/html_backup/. /var/www/html/
-
-# 6. Verificar que los archivos están ahí
+# 5. Verificar que los archivos están ahí
+```bash
 ls -l /var/www/html
-5. Persistencia (Configuración fstab)
-Configuramos el sistema para que monte este volumen automáticamente al reiniciar.
+```
 
-# 1. Obtener el UUID del nuevo volumen
+## 5. Persistencia (Configuración fstab)
+Configuramos el sistema para que monte este volumen automáticamente al reiniciar.
+```bash
+
+ # 1. Obtener el UUID del nuevo volumen
 sudo blkid | grep lv_html
 # Copia el valor que aparece entre comillas después de UUID=
 
@@ -83,7 +92,9 @@ df -h | grep html
 
 # 4. Iniciar Apache nuevamente
 sudo systemctl start apache2
-Limpieza (Opcional)
+```
+
+#Limpieza (Opcional)
 Si todo funciona y ves tu página web correctamente, puedes borrar la carpeta de respaldo antigua.
 
 sudo rm -rf /var/www/html_backup
