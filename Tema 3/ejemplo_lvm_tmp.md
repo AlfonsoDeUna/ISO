@@ -62,11 +62,7 @@ sudo lvcreate -n root -L 5G bgx
 sudo apt install xfsprogs
 
 # Formatear cada volumen lógico
-sudo mkfs.xfs /dev/mapper/bgx-root
-sudo mkfs.xfs /dev/mapper/bgx-opt
 sudo mkfs.xfs /dev/mapper/bgx-tmp
-sudo mkfs.xfs /dev/mapper/bgx-var
-sudo mkfs.xfs /dev/mapper/bgx-home
 
 sudo mkfs.ext4 /dev/vg-test/myvol1
 
@@ -133,57 +129,6 @@ sudo xfs_growfs /dev/mapper/bgx-tmp
 ```
 
 * **Nota:** Si usaras EXT4, el comando sería `resize2fs`.
-
-## 9. Migración del Sistema Raíz (ROOT)Mover el sistema operativo completo.
-
-```bash
-# 1. Preparar directorio y montaje
-sudo mkdir /mnt/nuevo_root
-sudo mount /dev/mapper/bgx-root /mnt/nuevo_root
-
-# 2. Sincronización completa (Excluyendo lo ya movido)
-# NOTA: Excluir 'tmp' si ya se movió, y siempre excluir 'mnt', 'proc', 'sys'.
-sudo rsync -axvH --exclude=tmp --exclude=mnt / /mnt/nuevo_root
-
-```
-
-* **Flags Rsync:** `-a` (archive), `-x` (no cruzar filesystems), `-v` (verbose), `-H` (hard links).
-
-## 10. Reinstalación del Bootloader (GRUB)Hacer que el sistema arranque desde el nuevo LVM.
-
-```bash
-# 1. Montar directorios de sistema en el nuevo entorno
-sudo mount --bind /dev /mnt/nuevo_root/dev
-sudo mount --bind /sys /mnt/nuevo_root/sys
-sudo mount --bind /proc /mnt/nuevo_root/proc
-
-# 2. Entrar en el nuevo entorno (Chroot)
-sudo chroot /mnt/nuevo_root
-
-# 3. Actualizar Grub
-update-grub
-
-# 4. Salir
-exit
-
-```
-
-### Solución de Problemas (Arranque Fallido)Si `update-grub` no detecta el cambio automáticamente:
-
-1. Editar `/boot/grub/grub.cfg`.
-2. Buscar el UUID del disco viejo.
-3. Reemplazar todas las ocurrencias con el UUID del nuevo volumen `bgx-root`.
-
-##11. Reciclaje del Disco ViejoUna vez el sistema arranca desde LVM, reutilizar el disco antiguo.
-
-```bash
-# Convertir partición antigua a PV y agregarla al grupo
-sudo pvcreate /dev/sda1
-sudo vgextend bgx /dev/sda1
-
-```
-
-
 
 # Anexo: Revertir Cambios (Limpieza)Comandos para eliminar toda la estructura creada (¡Peligro de pérdida de datos!).
 
