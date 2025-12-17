@@ -43,7 +43,7 @@ crea el comando  y copia un pantallazo
 
 ## 3. Formateo en EXT4
 
-Formateamos el nuevo volumen con el sistema de archivos EXT4, tal como se solicitó.
+Formateamos el nuevo volumen con el sistema de archivos EXT4
 
 ```bash
 sudo mkfs.ext4 /dev/mapper/vg_web-lv_html
