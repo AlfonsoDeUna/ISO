@@ -63,7 +63,7 @@ systemctl daemon-reload
 
 # 3. Copiar el sistema (Excluyendo temporales y montajes para evitar bucles)
 # Flags: -a (archive), -x (one file system), -v (verbose), -H (hard links)
-sudo rsync -axvH --exclude=mnt / /mnt/nuevo_root
+sudo rsync -avHAXx --exclude='/mnt' /mnt/nuevo_root
 
 ```
 
@@ -79,6 +79,9 @@ sudo mount --bind /proc /mnt/nuevo_root/proc
 
 # 2. Cambiar la raíz (Chroot)
 sudo chroot /mnt/nuevo_root
+
+#3. update el grub
+update-grub
 
 umount /mnt/nuevo_root/dev /mnt/nuevo_root/sys /mnt/nuevo_root/proc
 
