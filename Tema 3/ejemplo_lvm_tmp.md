@@ -1,10 +1,8 @@
-# Guía de Migración de Sistema Linux a LVM (Logical Volume Manager)Esta guía documenta paso a paso el proceso para transformar un servidor con particiones físicas estándar (o mal particionado) a una estructura flexible LVM, permitiendo separar `/home`, `/var`, `/tmp`, y `/` (root) sin reinstalar el sistema operativo.
-
+# Guía de Migración de Sistema Linux a LVM (Logical Volume Manager)Esta guía documenta paso a paso el proceso para transformar un servidor con particiones físicas estándar (o mal particionado) a una estructura flexible LVM, permitiendo separar  `/tmp`, y `/` (root) sin reinstalar el sistema operativo.
 
 ## Prerrequisitos* Acceso **root** o usuario con privilegios `sudo`.
 * Discos duros adicionales o espacio libre para crear los nuevos volúmenes (en el ejemplo se usan `/dev/sdb`, `/dev/sdc`, `/dev/sdd`, `/dev/sde`).
 * Herramientas necesarias: `lvm2`, `xfsprogs`, `rsync`.
-
 
 
 ## 1. Identificación de DiscosVerificar los discos conectados al sistema para identificar cuáles se usarán en el nuevo esquema LVM.
