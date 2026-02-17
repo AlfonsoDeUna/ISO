@@ -171,7 +171,3 @@ Write-Host "IVA (21%): $iva €"
 Write-Host "Precio TOTAL: $precioTotal €"
 
 ```
-
----
-
-¿Te gustaría que te ayude a crear un script que automatice la ejecución de todos estos ejercicios a la vez?
