@@ -1,5 +1,4 @@
 # Gestión de Usuarios Locales con PowerShell
-## Ejercicios Graduales
 
 ---
 
