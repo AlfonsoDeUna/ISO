@@ -1,13 +1,11 @@
 # Gestión de Usuarios Locales con PowerShell
 
----
 
 ## Ejercicio 1 – Tu primera cuenta
 
 Crea un usuario llamado `Becario01` con tu nombre completo y la descripción `"Prácticas 2025"`.  
 Luego comprueba que existe usando `Get-LocalUser` y muestra el resultado por pantalla.
 
----
 
 ## Ejercicio 2 – Cuenta temporal
 
@@ -15,21 +13,20 @@ Crea un usuario llamado `Sustituto` configurado para que deba cambiar la contras
 Una vez creado, deshabilita la cuenta y luego vuelve a habilitarla.  
 Comprueba el estado tras cada operación.
 
----
+
 
 ## Ejercicio 3 – Solo para mirar
 
 Lista todos los usuarios locales del equipo mostrando únicamente las columnas `Name`, `Enabled` y `LastLogon`.  
 Exporta ese resultado a un archivo de texto llamado `usuarios.txt` en el escritorio.
 
----
+
 
 ## Ejercicio 4 – Alta completa
 
 Crea un usuario llamado `AdminDept` y, en un paso separado, añádelo al grupo `Administradores`.  
 Verifica con `Get-LocalGroupMember` que el usuario aparece correctamente en el grupo.
 
----
 
 ## Ejercicio 5 – Reseteo y modificación
 
@@ -39,7 +36,7 @@ Trabaja sobre el usuario `Becario01` creado en el ejercicio 1:
 - **b)** Cambia su nombre completo a otro distinto
 - **c)** Resetea su contraseña (sin necesidad de conocer la anterior)
 
----
+
 
 ## Ejercicio 6 – Alta masiva desde array
 
@@ -47,7 +44,6 @@ Crea de una sola vez los usuarios `Dpto01`, `Dpto02` y `Dpto03` usando un array 
 Por cada usuario creado, muestra un mensaje de confirmación en verde.  
 Al terminar, lista todos los usuarios del sistema.
 
----
 
 ## Ejercicio 7 – Alta condicional
 
@@ -58,7 +54,7 @@ Crea un script que pida al usuario un nombre por teclado y, antes de crear la cu
 
 > **Pista:** `Get-LocalUser -Name "X" -ErrorAction SilentlyContinue`
 
----
+
 
 ## Ejercicio 8 – Baja segura
 
