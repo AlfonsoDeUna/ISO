@@ -88,12 +88,7 @@ Crea un script llamado `GestionUsuarios.ps1` que muestre el siguiente menú en b
 
 ### Requisitos obligatorios
 
-- Cada opción debe estar implementada en una **función separada**.  
-  Ejemplos: `function CrearUsuario {}`, `function ListarUsuarios {}`, etc.
-- Los mensajes de confirmación se muestran en **verde**.
-- Los mensajes de error se muestran en **rojo**.
 - La opción `6` (Eliminar) debe pedir confirmación antes de borrar: `"¿Estás seguro? (S/N)"`
-- Si se introduce una opción no válida, mostrar aviso y volver al menú.
 - El menú debe volver a aparecer automáticamente tras cada acción.
 
 ### Reto extra *(opcional)*
